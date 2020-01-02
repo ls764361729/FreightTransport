@@ -1,6 +1,6 @@
 
 
-
+DROP DATABASE freight_transport;
 CREATE DATABASE freight_transport DEFAULT  CHARSET utf8;
 USE freight_transport;
 #1管理员表
@@ -26,7 +26,7 @@ f_type VARCHAR(100) COMMENT '交易类型',
 f_name_type VARCHAR(100) COMMENT '交易人类型',
 f_ids INT COMMENT '交易人id',
 f_name VARCHAR(100) COMMENT '交易人名字',
-f_date DATETIME DEFAULT NOW() COMMENT '交易时间',
+f_date DATETIME  COMMENT '交易时间',
 f_remarks VARCHAR(256) COMMENT '备注'
 );
 INSERT INTO `financial_info_sheet` VALUES ('1','1000','500','500','充值','司机','001','admin','20190109','');
@@ -85,7 +85,7 @@ s_phone VARCHAR(50) COMMENT '手机号码' ,
 s_password VARCHAR(100) COMMENT '密码',
 s_uuid VARCHAR(100) COMMENT '身份证号码',
 s_balance DECIMAL(10,2) COMMENT '余额',
-s_register_date DATETIME DEFAULT NOW() COMMENT '注册时间',
+s_register_date DATETIME COMMENT '注册时间',
 s_remarks VARCHAR(256) COMMENT '备注'
 );
 INSERT INTO `shipper_info`(s_name,s_sex,s_phone,s_password,s_uuid,s_balance) VALUES
@@ -115,7 +115,7 @@ d_phone VARCHAR(50) COMMENT '手机号码' ,
 d_password VARCHAR(50) COMMENT '密码',
 d_card VARCHAR(1000) COMMENT '油卡',
 d_balance DECIMAL(10,2) COMMENT '余额',
-d_register_date DATETIME DEFAULT NOW()  COMMENT '注册时间',
+d_register_date DATETIME  COMMENT '注册时间',
 d_s_remarks VARCHAR(256) COMMENT '备注'
 );
 INSERT INTO `driver_info`(d_name,d_sex,d_uuid,d_phone,d_password,d_card,d_balance) VALUES

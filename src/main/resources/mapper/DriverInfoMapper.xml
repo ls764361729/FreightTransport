@@ -28,7 +28,7 @@
     <insert id="insert" parameterType="com.ls.FreightTransport.entity.DriverInfo">
         insert into driver_info ( d_name, d_sex,
         d_uuid, d_phone, d_password,
-        card, d_balance, d_register_date
+        d_card, d_balance, d_register_date
         )
         values ( #{dName,jdbcType=VARCHAR}, #{dSex,jdbcType=VARCHAR},
         #{dUuid,jdbcType=VARCHAR}, #{dPhone,jdbcType=VARCHAR}, #{dPassword,jdbcType=VARCHAR},

@@ -55,55 +55,55 @@
 		</div>
 
 		<Modal v-model="modal14" :loading="modal14loading" width="750" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="financeInfo" :label-width="80">
+			<Form ref="formValidate" :model="financialInfoSheet" :label-width="80">
 				<Row>
 					<Col span="8">
 					<FormItem label="编号" prop="f_id">
-						<Input v-model="financeInfo.fId" placeholder="自动识别"></Input>
+						<Input v-model="financialInfoSheet.fId" placeholder="自动识别"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易前余额" prop="befor_money">
-						<Input v-model="financeInfo.beforMoney" :maxlength=10 placeholder="请输入交易前余额"></Input>
+						<Input v-model="financialInfoSheet.fBeforMoney" :maxlength=10 placeholder="请输入交易前余额"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易后余额" prop="after_money">
-						<Input v-model="financeInfo.afterMoney" :maxlength=20 placeholder="请输入交易后余额"></Input>
+						<Input v-model="financialInfoSheet.fAfterMoney" :maxlength=20 placeholder="请输入交易后余额"></Input>
 					</FormItem>
 					</Col>
 				</Row>
 				<Row>
 					<Col span="8">
 					<FormItem label="交易余额" prop="f_money">
-						<Input v-model="financeInfo.fMoney" :maxlength=20 placeholder="请输入交易余额"></Input>
+						<Input v-model="financialInfoSheet.fMoney" :maxlength=20 placeholder="请输入交易余额"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易类型" prop="f_type">
-						<Input v-model="financeInfo.fType" :maxlength=20 placeholder="请输入交易类型"></Input>
+						<Input v-model="financialInfoSheet.fType" :maxlength=20 placeholder="请输入交易类型"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易身份" prop="f_name_type">
-						<Input v-model="financeInfo.fNameType" :maxlength=20 placeholder="请输入交易身份"></Input>
+						<Input v-model="financialInfoSheet.fNameType" :maxlength=20 placeholder="请输入交易身份"></Input>
 					</FormItem>
 					</Col>
 				</Row>
 				<Row>
 					<Col span="8">
 					<FormItem label="交易人id" prop="f_ids">
-						<Input v-model="financeInfo.fIds" :maxlength=20 placeholder="请输入交易人id"></Input>
+						<Input v-model="financialInfoSheet.fIds" :maxlength=20 placeholder="请输入交易人id"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易人名字" prop="f_name">
-						<Input v-model="financeInfo.fName" :maxlength=20 placeholder="请输入交易人名字"></Input>
+						<Input v-model="financialInfoSheet.fName" :maxlength=20 placeholder="请输入交易人名字"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="交易时间" prop="f_date">
-						<Input v-model="financeInfo.fDate" :maxlength=20 placeholder="请输入交易时间"></Input>
+						<Input v-model="financialInfoSheet.fDate" :maxlength=20 placeholder="请输入交易时间"></Input>
 					</FormItem>
 					</Col>
 				</Row>
@@ -146,7 +146,7 @@
 					},
 					{
 						title: '交易前余额',
-						key: 'beforMoney',
+						key: 'fBeforMoney',
 						align: 'center',
 						tooltip: true
 					}, {
@@ -156,7 +156,7 @@
 					},
 					{
 						title: '交易后余额',
-						key: 'afterMoney',
+						key: 'fAfterMoney',
 						align: 'center'
 					},
 					{
@@ -221,10 +221,10 @@
 				jyr: '',
 				jyrs: false,
 				jylxs: false,
-				financeInfo: {
+				financialInfoSheet: {
 					fId: 0,
-					beforMoney: 0,
-					afterMoney: 0,
+					fBeforMoney: 0,
+					fAfterMoney: 0,
 					fMoney: 0,
 					fType: '',
 					fNameType: '',
@@ -238,22 +238,22 @@
 			//单击添加
 			add() {
 				this.title = "添加车辆类型";
-				this.financeInfo.fName = "";
-				this.financeInfo.fNameType = "";
+				this.financialInfoSheet.fName = "";
+				this.financialInfoSheet.fNameType = "";
 				this.modal14 = true;
 			},
 			//单击编辑
 			show(data) {
 				this.title = '编辑车辆类型'
-				this.financeInfo.fId = data.fId;
-				this.financeInfo.beforMoney = data.beforMoney;
-				this.financeInfo.afterMoney = data.afterMoney;
-				this.financeInfo.fMoney = data.fMoney;
-				this.financeInfo.fType = data.fType;
-				this.financeInfo.fNameType = data.fNameType;
-				this.financeInfo.fIds = data.fIds;
-				this.financeInfo.fName = data.fName;
-				this.financeInfo.fDate = data.fDate;
+				this.financialInfoSheet.fId = data.fId;
+				this.financialInfoSheet.fBeforMoney = data.fBeforMoney;
+				this.financialInfoSheet.fAfterMoney = data.fAfterMoney;
+				this.financialInfoSheet.fMoney = data.fMoney;
+				this.financialInfoSheet.fType = data.fType;
+				this.financialInfoSheet.fNameType = data.fNameType;
+				this.financialInfoSheet.fIds = data.fIds;
+				this.financialInfoSheet.fName = data.fName;
+				this.financialInfoSheet.fDate = data.fDate;
 				this.modal14 = true;
 			},
 			//弹出添加保存
@@ -263,7 +263,7 @@
 				if (this.title == "编辑车辆类型") {
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/financeInfo/' + urls, th.financeInfo, {
+				axios.post(th.url + '/financialInfoSheet/' + urls, th.financialInfoSheet, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -293,7 +293,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/financeInfo/deleteByPrimaryKey', {
+						axios.get(th.url + '/financialInfoSheet/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -323,7 +323,7 @@
 					this.jyr = '';
 				}
 				const th = this;
-				axios.get(th.url + '/financeInfo/selectType', {
+				axios.get(th.url + '/financialInfoSheet/selectType', {
 					params: {
 						page: page,
 						fName: th.jyr,

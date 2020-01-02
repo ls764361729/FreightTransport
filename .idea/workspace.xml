@@ -18,6 +18,108 @@
       <change afterPath="$PROJECT_DIR$/front_end/public/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front_end/src/assets/logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/front_end/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/ordermanager/all.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/driver/ordermanager/all.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/ordermanager/intransported.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/driver/ordermanager/intransported.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/ordermanager/tobetransported.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/personalinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/driver/personalinfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/placeanorder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/driver/placeanorder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/quickorder.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/driver/vehicleinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/driver/vehicleinfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/index/manager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/index/manager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/index/shipper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/index/shipper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/login/driver.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/login/driver.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/login/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/login/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/login/manager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/login/manager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/login/shipper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/login/shipper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/main/driver.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/main/driver.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/main/manager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/main/manager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/main/shipper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/main/shipper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/finance/constinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/finance/constinfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/finance/recharge.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/finance/recharge.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/finance/withdrawal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/finance/withdrawal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/collectfess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/collectfess.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/dirver.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/dirver.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/evaluation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/evaluation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/manager.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/manager.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/notice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/notice.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/shipper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/shipper.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/info/vehicle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/info/vehicle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/all.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/all.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/complete.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/complete.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/intransported.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/intransported.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/tobetransported.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/ordermanager/tobetransported.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/manager/reportform/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/manager/reportform/order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/all.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/all.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/complete.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/complete.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/intransported.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/intransported.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/tobetransported.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/ordermanager/tobetransported.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/personalinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/personalinfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/components/shipper/placeanorder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/components/shipper/placeanorder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front_end/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/DriverInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/DriverInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/FinancialInfoSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/FinancialInfoSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/OrderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/OrderInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/ShipperInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/ShipperInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/StaffInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/StaffInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CollectFeesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CollectFeesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DriverInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DriverInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/VehicleInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VehicleInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/dtxc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/image/dtxc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/LocateInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/LocateInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/OrderInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/OrderInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/VehicleInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/controller/VehicleInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/dao/OrderInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/dao/OrderInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/DriverInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/DriverInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/FinancialInfoSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/FinancialInfoSheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/OrderInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/ShipperInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/ShipperInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/StaffInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/StaffInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/VehicleInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/entity/VehicleInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/service/OrderInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CollectFeesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CollectFeesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DriverInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DriverInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EvaluationInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EvaluationInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/LocateInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/LocateInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/VehicleInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/VehicleInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/LocateInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/LocateInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/OrderInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/OrderInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/VehicleInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/controller/VehicleInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/dao/OrderInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/dao/OrderInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/DriverInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/DriverInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/FinancialInfoSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/FinancialInfoSheet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/OrderInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/ShipperInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/ShipperInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/StaffInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/StaffInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/VehicleInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/entity/VehicleInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/service/OrderInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/CollectFeesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/CollectFeesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/DriverInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/DriverInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/EvaluationInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/EvaluationInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/LocateInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/LocateInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/VehicleInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/mapper/VehicleInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/contact/WEB-INF/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/contact/WEB-INF/classes/spring-web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,41 +133,50 @@
     <session id="1645080799">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.209" value="1" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="284" />
-          <entry key="xml" value="141" />
+          <entry key="html" value="41" />
+          <entry key="java" value="303" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="284" />
-          <entry key="SQL" value="7" />
-          <entry key="XML" value="134" />
+          <entry key="HTML" value="41" />
+          <entry key="JAVA" value="303" />
+          <entry key="Properties" value="1" />
+          <entry key="SQL" value="8" />
+          <entry key="XML" value="159" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="83" />
-          <entry key="properties" value="3" />
-          <entry key="xml" value="26" />
+          <entry key="class" value="4" />
+          <entry key="html" value="2" />
+          <entry key="java" value="143" />
+          <entry key="properties" value="5" />
+          <entry key="xml" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="83" />
-          <entry key="Properties" value="3" />
-          <entry key="XML" value="26" />
+          <entry key="CLASS" value="4" />
+          <entry key="HTML" value="2" />
+          <entry key="JAVA" value="143" />
+          <entry key="Properties" value="5" />
+          <entry key="XML" value="41" />
         </counts>
       </usages-collector>
     </session>
@@ -75,29 +186,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3507">
+              <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/Manager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/image/dtxc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/StaffInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="159">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -113,15 +215,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>re</find>
-      <find>driver_information</find>
-      <find>updatePassword</find>
-      <find>a_</find>
-      <find>DriverInformation</find>
-      <find>evaluation_information</find>
-      <find>finance_info</find>
-      <find>LocateInfoMapper.</find>
-      <find>contacts</find>
       <find>end_date</find>
       <find>oContacts</find>
       <find>property=&quot;oContacts&quot;</find>
@@ -134,8 +227,24 @@
       <find>o_Contacts</find>
       <find>register_date</find>
       <find>vLicense</find>
-      <find>iId</find>
       <find>vehicle</find>
+      <find>card</find>
+      <find>VehicleInfoMapper</find>
+      <find>selectGroup</find>
+      <find>BaseResultMap</find>
+      <find>iId</find>
+      <find>selectPage</find>
+      <find>date</find>
+      <find>private Date</find>
+      <find>o_id</find>
+      <find>order_info</find>
+      <find>insert into order_info</find>
+      <find>ins</find>
+      <find>o_price</find>
+      <find>locations</find>
+      <find>getDate</find>
+      <find>lPrice</find>
+      <find>updateSet</find>
     </findStrings>
     <replaceStrings>
       <replace>driver_info</replace>
@@ -152,35 +261,20 @@
       <replace>com.ls.FreightTransport.entity.VehicleType</replace>
       <replace>shipper_info</replace>
       <replace>o_contacts</replace>
+      <replace>vId</replace>
+      <replace>OPrice</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/front_end" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/DriverInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/DriverInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/CollectFeesService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/ManagerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/EvaluationInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/EvaluationInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/EvaluationInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/EvaluationInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/FinancialInfoSheetController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/FinancialInfoSheetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/FinancialInfoSheetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/FinancialInfoSheetMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/FinancialInfoSheetMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/LocateInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/NoticeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/NoticeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/NoticeService.java" />
@@ -190,13 +284,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/ShipperInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/ShipperInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/StaffInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StaffInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/VehicleInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/VehicleInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VehicleInfoMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VerificationCodeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VerificationCode.java" />
@@ -208,9 +299,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/ShipperInfoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/DriverInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ShipperInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DriverInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleInfo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/VehicleInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/OrderInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/StaffInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/ShipperInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/FinancialInfoSheet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/DriverInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CollectFeesMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/image/dtxc.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java" />
       </list>
     </option>
   </component>
@@ -263,13 +374,14 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/front_end/package.json" />
+      <path value="$PROJECT_DIR$/node_modules/jquery/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1868" />
-    <option name="y" value="253" />
-    <option name="width" value="983" />
-    <option name="height" value="521" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-130" />
+    <option name="y" value="257" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -277,9 +389,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,27 +414,52 @@
               <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FreightTransport" type="b2602c69:ProjectViewProjectNode" />
               <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreightTransport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreightTransport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreightTransport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreightTransport" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577515357639" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577613697808" />
+    <property name="last_opened_file_path" value="D:/cmdb" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -450,12 +586,16 @@
       <workItem from="1576914201996" duration="7358000" />
       <workItem from="1576982108497" duration="2382000" />
       <workItem from="1577513509790" duration="775000" />
-      <workItem from="1577514495302" duration="721000" />
+      <workItem from="1577514495302" duration="7980000" />
+      <workItem from="1577526618342" duration="149000" />
+      <workItem from="1577598800553" duration="12046000" />
+      <workItem from="1577950100126" duration="691000" />
+      <workItem from="1577951302005" duration="1957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14514000" />
+    <option name="totallyTimeSpent" value="36616000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,10 +607,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-130" y="257" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8673139" visible="true" weight="0.2118003" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8673139" visible="true" weight="0.3280543" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.20842217" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -481,25 +621,25 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37418655" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28091106" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47859326" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Application Servers" order="7" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.21800433" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.0" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="JSF" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="CDI" order="6" />
+      <window_info anchor="right" id="CDI" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
@@ -514,363 +654,360 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/FinancialInfoSheetServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DriverInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="216">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/FinancialInfoSheetService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="67" column="20" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/LocateInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="96" column="56" lean-forward="true" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/NoticeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/NoticeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/NoticeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/NoticeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SCollectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/SCollectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/SCollectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/SCollectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/ShipperInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StaffInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="263">
+          <caret line="15" column="81" lean-forward="true" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/VehicleInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="49" column="7" lean-forward="true" selection-start-line="48" selection-end-line="49" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/VehicleInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VerificationCode.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VerificationCodeMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VehicleTypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/VehicleTypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-454">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/VehicleTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+        <state relative-caret-position="567">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VehicleTypeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="609">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VehicleInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="38" column="2" selection-start-line="27" selection-start-column="81" selection-end-line="38" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StaffInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/EvaluationInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/EvaluationInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/EvaluationInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EvaluationInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="74" lean-forward="true" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.0.RELEASE/spring-web-5.1.0.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="125" column="65" selection-start-line="125" selection-start-column="65" selection-end-line="125" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/EvaluationInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="82" column="58" lean-forward="true" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/DriverInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="112" column="28" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/FinancialInfoSheetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/NoticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="223">
+          <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/SCollectController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="26" />
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/ShipperInfoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/VehicleType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mariadb/jdbc/mariadb-java-client/2.3.0/mariadb-java-client-2.3.0.jar!/org/mariadb/jdbc/internal/util/exceptions/ExceptionMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/ShipperInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/ShipperInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1158">
-          <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ShipperInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VehicleInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/VehicleInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/StaffInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/CollectFeesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="246">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/StaffInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="239">
+          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/ShipperInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/SCollect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/Notice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/FinancialInfoSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/EvaluationInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/DriverInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/CollectFees.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/CollectFeesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/CollectFeesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="107" column="28" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="56" column="82" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="56" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/CollectFeesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/CollectFeesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/NoticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="123" column="51" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/OrderInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/FinancialInfoSheetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/entity/LocateInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="93" column="7" lean-forward="true" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2165">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/mchange/mchange-commons-java/0.2.11/mchange-commons-java-0.2.11.jar!/com/mchange/v2/async/ThreadPoolAsynchronousRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="722" selection-start-line="722" selection-end-line="722" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mariadb/jdbc/mariadb-java-client/2.3.0/mariadb-java-client-2.3.0.jar!/org/mariadb/jdbc/MariaDbConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="556" selection-start-line="556" selection-end-line="556" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/LocateInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/LocateInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/LocateInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LocateInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/DriverInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/VehicleInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2044">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectFeesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/LocateInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/OrderInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/service/impl/OrderInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="92" column="65" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/dao/OrderInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrderInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ls/FreightTransport/controller/OrderInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3507">
+          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/image/dtxc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
         </state>
       </provider>
     </entry>

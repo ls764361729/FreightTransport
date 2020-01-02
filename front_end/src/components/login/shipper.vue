@@ -16,7 +16,7 @@
 		<div class="login">
 			<br />
 			<br />
-			<h1 style="color: white;">货主系统</h1>
+			<h1 style="color: white;">货运运货主登录中心</h1>
 			<br />
 			<Form style="width: 330px;margin: auto;" :model="user">
 				<div>
@@ -86,7 +86,7 @@
 					localStorage.setItem('mName', res.data.data.mName);
 					localStorage.setItem('mUser', res.data.data.mUser);
 					setTimeout(function() {
-						window.location.href = "/#/adminindex/";
+						window.location.href = "/#/";
 					}, 900);
 				} else {
 					this.user.password = "";

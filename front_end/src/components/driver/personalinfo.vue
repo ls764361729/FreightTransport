@@ -7,41 +7,41 @@
 			</marquee>
 			</MenuItem>
 		</div>
-			<Form ref="formValidate" :model="driverInformation" :label-width="80" style="position:relative;left: 110px;">
+			<Form ref="formValidate" :model="driverInfo" :label-width="80" style="position:relative;left: 110px;">
 				<Row>
 					<Col span="8">
 					<FormItem label="编号" prop="contacts">
-						<Input v-model="driverInformation.dId" disabled  ></Input>
+						<Input v-model="driverInfo.dId" disabled  ></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="姓名" prop="contacts">
-						<Input v-model="driverInformation.dName" disabled   ></Input>
+						<Input v-model="driverInfo.dName" disabled   ></Input>
 					</FormItem>
 					</Col>
 				</Row>
 				<Row>
 					<Col span="8">
 					<FormItem label="手机号码" prop="startDate">
-						<Input v-model="driverInformation.dPhone" disabled   ></Input>
+						<Input v-model="driverInfo.dPhone" disabled   ></Input>
 					</FormItem>
 					</Col>
 			
 					<Col span="8">
 					<FormItem label="身份证" prop="contacts">
-						<Input v-model="driverInformation.dUuid" disabled   ></Input>
+						<Input v-model="driverInfo.dUuid" disabled   ></Input>
 					</FormItem>
 					</Col>
 				</Row>
 				<Row>
 					<Col span="8">
 					<FormItem label="余额" prop="contacts">
-						<Input v-model="driverInformation.dBalance" disabled   ></Input>
+						<Input v-model="driverInfo.dBalance" disabled   ></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="注册时间" prop="startDate">
-						<Input v-model="driverInformation.registerDate" disabled   ></Input>
+						<Input v-model="driverInfo.dRegisterDate" disabled   ></Input>
 					</FormItem>
 					</Col>
 				</Row>
@@ -53,7 +53,7 @@
 		data() {
 			return {
 				url: "http://localhost:8080",
-				driverInformation: {
+				driverInfo: {
 					dId: 0,
 					dName: '',
 					dSex: '',
@@ -61,7 +61,7 @@
 					dPhone: '',
 					dPassword: '',
 					dBalance: 0,
-					registerDate: ''
+					dRegisterDate: ''
 				},
 			}
 		},
@@ -70,12 +70,12 @@
 		},
 		created() {
 			var th = this;
-			axios.get(th.url + '/driverInformation/selectByPrimaryKey', {
+			axios.get(th.url + '/driverInfo/selectByPrimaryKey', {
 				params: {
 					id:localStorage.getItem("mUser")
 				}
 			}).then(function(res) {
-				th.driverInformation = res.data.data;
+				th.driverInfo = res.data.data;
 			})
 			
 		}

@@ -1,5 +1,8 @@
 package com.ls.FreightTransport.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -83,6 +86,9 @@ public class FinancialInfoSheet {
      *
      * @mbg.generated
      */
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date fDate;
 
     /**

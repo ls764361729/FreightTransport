@@ -11,10 +11,10 @@ public interface OrderInfoMapper {
     /**
      * 根据主键删除操作
      *
-     * @param id
+     * @param oId
      * @return
      */
-    int deleteByPrimaryKey(int id);
+    int deleteByPrimaryKey(String oId);
 
     /**
      * 添加操作
@@ -27,10 +27,10 @@ public interface OrderInfoMapper {
     /**
      * 根据主键查询操作
      *
-     * @param id
+     * @param oId
      * @return
      */
-    OrderInfo selectByPrimaryKey(int id);
+    OrderInfo selectByPrimaryKey(String oId);
 
     /**
      * 全部查询操作

@@ -71,18 +71,18 @@
 			</div>
 		</div>
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="driverInformation" :label-width="80">
+			<Form ref="formValidate" :model="driverInfo" :label-width="80">
 				<FormItem label="姓名" prop="dName">
-					<Input v-model="driverInformation.dName" :maxlength=6 placeholder="请输入姓名"></Input>
+					<Input v-model="driverInfo.dName" :maxlength=6 placeholder="请输入姓名"></Input>
 				</FormItem>
 				<FormItem label="身份证号码" prop="dUuid">
-					<Input v-model="driverInformation.dUuid" :maxlength=18 placeholder="请输入身份证号码"></Input>
+					<Input v-model="driverInfo.dUuid" :maxlength=18 placeholder="请输入身份证号码"></Input>
 				</FormItem>
 				<FormItem label="手机号码" prop="dPhone">
-					<Input v-model="driverInformation.dPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
+					<Input v-model="driverInfo.dPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
 				</FormItem>
 				<FormItem label="密码" prop="dPassword">
-					<Input type="password" v-model="driverInformation.dPassword" :maxlength=16 placeholder="请输入密码"></Input>
+					<Input type="password" v-model="driverInfo.dPassword" :maxlength=16 placeholder="请输入密码"></Input>
 				</FormItem>
 			</Form>
 		</Modal>
@@ -104,16 +104,16 @@
 				title:'添加司机',
 				url: "http://localhost:8080",
 				count: 10,
-				driverInformation: {
+				driverInfo: {
 					dId: 0,
 					dName: '',
 					dSex: '',
 					dUuid: '',
 					dPhone: '',
 					dPassword: '',
-					card: 0,
+					dCard: 0,
 					dBalance: 0,
-					registerDate: ''
+					dRegisterDate: ''
 				},
 				columns7: [{
 						title: '编号',
@@ -144,7 +144,7 @@
 						align: 'center'
 					}, {
 						title: '油卡',
-						key: 'card',
+						key: 'dCard',
 						tooltip: true,
 						align: 'center'
 					}, {
@@ -154,7 +154,7 @@
 						align: 'center'
 					}, {
 						title: '注册时间',
-						key: 'registerDate',
+						key: 'dRegisterDate',
 						tooltip: true,
 						align: 'center'
 					},
@@ -203,40 +203,40 @@
 			//单击添加
 			add() {
 				this.title = "添加司机";
-				this.driverInformation.dPhone = "";
-				this.driverInformation.dUuid = "";
-				this.driverInformation.dName = "";
-				this.driverInformation.dPassword = "";
+				this.driverInfo.dPhone = "";
+				this.driverInfo.dUuid = "";
+				this.driverInfo.dName = "";
+				this.driverInfo.dPassword = "";
 				this.modal14 = true;
 			},
 			//单击编辑
 			show(data){
 				this.title = '编辑司机'
 				this.modal14 = true;
-				this.driverInformation.dId = data.dId;
-				this.driverInformation.dPhone = data.dPhone;
-				this.driverInformation.dUuid = data.dUuid;
-				this.driverInformation.dName = data.dName;
-				this.driverInformation.dPassword = data.dPassword;
+				this.driverInfo.dId = data.dId;
+				this.driverInfo.dPhone = data.dPhone;
+				this.driverInfo.dUuid = data.dUuid;
+				this.driverInfo.dName = data.dName;
+				this.driverInfo.dPassword = data.dPassword;
 			},
 			//弹出添加保存
 			addok() {
-				if (this.driverInformation.dName.length < 1) {
+				if (this.driverInfo.dName.length < 1) {
 					this.$Message.warning('请输入名字!');
 					this.modal14show();
 					return;
 				}
-				if (this.driverInformation.dPhone.length < 1 || this.driverInformation.dPhone.length != 11) {
+				if (this.driverInfo.dPhone.length < 1 || this.driverInfo.dPhone.length != 11) {
 					this.$Message.warning('电话号码不正确，需要11位手机号码!');
 					this.modal14show();
 					return;
 				}
-				if (this.driverInformation.dPassword.length < 6 ) {
+				if (this.driverInfo.dPassword.length < 6 ) {
 					this.$Message.warning('密码不正确,需要6位以上!');
 					this.modal14show();
 					return;
 				}
-				var text = this.driverInformation.dUuid;
+				var text = this.driverInfo.dUuid;
 				text = text.toUpperCase();
 				var aa = ["7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7", "9", "10", "5", "8", "4", "2"];
 				var bb = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
@@ -249,13 +249,13 @@
 					this.modal14show();
 					return;
 				}
-				this.driverInformation.dSex = text.substring(16, 17) % 2 == 0 ? "女" : "男";
+				this.driverInfo.dSex = text.substring(16, 17) % 2 == 0 ? "女" : "男";
 				const th = this;
 				var urls = "insert";
 				if(this.title == "编辑司机"){
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/driverInformation/'+urls, th.driverInformation, {
+				axios.post(th.url + '/driverInfo/'+urls, th.driverInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -285,7 +285,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/driverInformation/deleteByPrimaryKey', {
+						axios.get(th.url + '/driverInfo/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -316,7 +316,7 @@
 				if(!th.dNames){
 					th.dName='';
 				}
-				axios.get(th.url + '/driverInformation/selectVague', {
+				axios.get(th.url + '/driverInfo/selectVague', {
 					params: {
 						page:page,
 						dPhone: th.dPhone,

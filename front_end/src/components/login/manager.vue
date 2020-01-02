@@ -16,7 +16,7 @@
 		<div class="login">
 			<br />
 			<br />
-			<h1 style="color: white;">货运运后台系统</h1>
+			<h1 style="color: white;">货运运管理员登录中心</h1>
 			<br />
 			<Form style="width: 330px;margin: auto;" :model="user">
 				<div>

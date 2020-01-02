@@ -27,7 +27,7 @@
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
 			<Form ref="formValidate" :model="notice" :label-width="80">
 				<FormItem label="公告方向" prop="vColor">
-					<Input v-model="notice.direction" disabled :maxlength=20 placeholder="请输入公告方向"></Input>
+					<Input v-model="notice.nDirection" disabled :maxlength=20 placeholder="请输入公告方向"></Input>
 				</FormItem>
 				<FormItem label="公告内容" prop="remarks">
 					<Input v-model="notice.nContent" type='textarea' :autosize="{minRows: 5,maxRows: 6}" placeholder="请输入公告内容"></Input>
@@ -43,12 +43,12 @@
 				modal14loading: true,
 				loading: true,
 				modal14: false,
-				loading: true,
+				title:'',
 				url: "http://localhost:8080",
 				count: 10,
 				columns7: [{
 						title: '编号',
-						key: 'infroId',
+						key: 'nInfroId',
 						align: 'center',
 						width: 100
 					},{
@@ -58,7 +58,7 @@
 					},
 					{
 						title: '公告方向',
-						key: 'direction',
+						key: 'nDirection',
 						align: 'center',
 						tooltip: true
 					},
@@ -89,9 +89,9 @@
 				],
 				data6: [],
 				notice:{
-					infroId:0,
+					nInfroId:0,
 					nContent:'',
-					direction:'',
+					nDirection:'',
 				}
 			}
 		},
@@ -99,9 +99,9 @@
 			//单击编辑
 			show(data) {
 				this.title = '编辑公告'
-				this.notice.infroId = data.infroId;
+				this.notice.nInfroId = data.nInfroId;
 				this.notice.nContent = data.nContent;
-				this.notice.direction =  data.direction;
+				this.notice.nDirection =  data.nDirection;
 				this.modal14 = true;
 			},
 			//弹出添加保存
@@ -131,7 +131,6 @@
 			//查询
 			changePage(page) {
 				const th = this;
-				console.log(th.url);
 				axios.get(th.url + '/notice/selectPage', {
 					params: {
 						page: page

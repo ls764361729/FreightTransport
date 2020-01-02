@@ -6,14 +6,14 @@
 <template>
 	<div>
 		<div class="rigtop">
-			<Form ref="shipperInformation" inline>
+			<Form ref="shipperInfo" inline>
 				<FormItem>
 					<Row>
 						<Col span="8" style="text-align: center;">
-						<Checkbox v-model="ddbhs" >订单编号</Checkbox>
+						<Checkbox v-model="ddbhs">订单编号</Checkbox>
 						</Col>
 						<Col span="16">
-						<Input height="20" v-model="orderInformation.oId" placeholder="模糊查询订单编号"></Input>
+						<Input height="20" v-model="orderInfo.oId" placeholder="模糊查询订单编号"></Input>
 						</Col>
 					</Row>
 				</FormItem>
@@ -23,7 +23,7 @@
 						<Checkbox v-model="lxhms">联系号码</Checkbox>
 						</Col>
 						<Col span="16">
-						<Input height="20" v-model="orderInformation.contacts" placeholder="模糊查询联系人手机号码"></Input>
+						<Input height="20" v-model="orderInfo.oContacts" placeholder="模糊查询联系人手机号码"></Input>
 						</Col>
 					</Row>
 				</FormItem>
@@ -56,14 +56,14 @@
 				modal14: false,
 				loading: true,
 				modal14loading: true,
-				title:'添加订单',
-				vehicleType:"",
-				vehicle:"",
-				ddbhs:false,
-				lxhms:false,
+				title: '添加订单',
+				vehicleType: "",
+				vehicleInfo: "",
+				ddbhs: false,
+				lxhms: false,
 				url: "http://localhost:8080",
 				count: 10,
-				shipperInformation:"",
+				shipperInfo: "",
 				columns7: [{
 						title: '订单编号',
 						key: 'oId',
@@ -72,40 +72,30 @@
 					},
 					{
 						title: '联系人手机',
-						key: 'contacts',
+						key: 'oContacts',
 						align: 'center',
 						tooltip: true
 					},
 					{
 						title: '预约时间',
-						key: 'startDate',
+						key: 'oStartDate',
 						align: 'center'
-					},
-					{
-						title: '完成时间',
-						key: 'endDate',
-						align: 'center',
 					}, {
 						title: '订单价格',
-						key: 'price',
+						key: 'oPrice',
 						tooltip: true,
 						align: 'center'
 					}, {
 						title: '发货地址',
-						key: 'shippingAddress',
+						key: 'oShippingAddress',
 						tooltip: true,
 						align: 'center'
 					}, {
 						title: '收货地址',
-						key: 'receivingAddress',
+						key: 'oReceivingAddress',
 						tooltip: true,
 						align: 'center'
-					}, {
-						title: '司机编号',
-						key: 'dId',
-						tooltip: true,
-						align: 'center'
-					},  {
+					},{
 						title: '订单状态',
 						key: 'oState',
 						tooltip: true,
@@ -113,31 +103,30 @@
 					}
 				],
 				data6: [],
-				orderInformation:{
-					oId:0,
-					oType:"",
-					contacts:"",
-					oRemarks:"",
-					startDate:"",
-					endDate:"",
-					price:"",
-					shippingAddress:"",
-					receivingAddress:"",
-					sId:0,
-					dId:0,
-					oState:"待运输",
-					eId:0,
+				orderInfo: {
+					oId: 0,
+					oType: "",
+					oContacts: "",
+					oRemarks: "",
+					oStartDate: "",
+					oEndDate: "",
+					oPrice: "",
+					oShippingAddress: "",
+					oReceivingAddress: "",
+					sId: 0,
+					dId: 0,
+					oState: "待运输"
 				}
 			}
 		},
 		methods: {
-				//时间
+			//时间
 			getStartTime(starTime) {
-				this.orderInformation.startDate = starTime;
+				this.orderInfo.oStartDate = starTime;
 			},
-				//时间
+			//时间
 			getStartTimeend(starTime) {
-				this.orderInformation.endDate = starTime;
+				this.orderInfo.oEndDate = starTime;
 			},
 			//单击添加
 			add() {
@@ -145,13 +134,10 @@
 				this.modal14 = true;
 			},
 			//弹出添加保存
-			addok(){
+			addok() {
 				const th = this;
-				var urls = "insert";
-				if (this.title == "编辑车辆类型") {
-					urls = "updateByPrimaryKey";
-				}
-				axios.post(th.url + '/orderInformation/' + urls, th.orderInformation, {
+				var urls = "updateByPrimaryKey";
+				axios.post(th.url + '/orderInfo/' + urls, th.orderInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -165,24 +151,24 @@
 						th.$Message.error(res.data.message);
 					}
 				})
-				
+
 			},
 			//单击编辑
-			show(data){
+			show(data) {
 				this.title = "编辑订单";
-				this.orderInformation.oId=data.oId;
-				this.orderInformation.oType=data.oType;
-				this.orderInformation.contacts=data.contacts;
-				this.orderInformation.oRemarks=data.oRemarks;
-				this.orderInformation.startDate=data.startDate;
-				this.orderInformation.endDate=data.endDate;
-				this.orderInformation.price=data.price;
-				this.orderInformation.shippingAddress=data.shippingAddress;
-				this.orderInformation.receivingAddress=data.receivingAddress;
-				this.orderInformation.sId=data.sId;
-				this.orderInformation.dId=data.dId;
-				this.orderInformation.oState=data.oState;
-				this.orderInformation.eId=data.eId;
+				this.orderInfo.oId = data.oId;
+				this.orderInfo.oType = data.oType;
+				this.orderInfo.oContacts = data.oContacts;
+				this.orderInfo.oRemarks = data.oRemarks;
+				this.orderInfo.oStartDate = data.oStartDate;
+				this.orderInfo.oEndDate = data.oEndDate;
+				this.orderInfo.oPrice = data.oPrice;
+				this.orderInfo.oShippingAddress = data.oShippingAddress;
+				this.orderInfo.oReceivingAddress = data.oReceivingAddress;
+				this.orderInfo.sId = data.sId;
+				this.orderInfo.dId = data.dId;
+				this.orderInfo.oState = data.oState;
+				this.orderInfo.eId = data.eId;
 				this.modal14 = true;
 			},
 			modal14show() {
@@ -192,13 +178,13 @@
 				}, 0);
 			},
 			//删除操作
-			remove(id){
+			remove(id) {
 				this.$Modal.confirm({
 					title: '删除提示',
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/orderInformation/deleteByPrimaryKey', {
+						axios.get(th.url + '/orderInfo/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -222,19 +208,19 @@
 			//查询
 			changePage(page) {
 				const th = this;
-				if(!th.ddbhs){
-					th.orderInformation.oId = '';
+				if (!th.ddbhs) {
+					th.orderInfo.oId = '';
 				}
-				if(!th.lxhms){
-					th.orderInformation.contacts = '';
+				if (!th.lxhms) {
+					th.orderInfo.oContacts = '';
 				}
-				axios.get(th.url + '/orderInformation/selectStart', {
+				axios.get(th.url + '/orderInfo/selectStart', {
 					params: {
 						page: page,
-						oId:th.orderInformation.oId,
-						oStart:'运输中',
-						contacts:th.orderInformation.contacts,
-						sId:localStorage.getItem("mUser")
+						oId: th.orderInfo.oId,
+						oStart: '运输中',
+						oContacts: th.orderInfo.oContacts,
+						sId: localStorage.getItem("mUser")
 					}
 				}).then(function(res) {
 					th.data6 = res.data.data;
@@ -245,14 +231,14 @@
 		},
 		created() {
 			var th = this;
-			axios.get(th.url + '/shipperInformation/selectAll').then(function(res) {
-				th.shipperInformation = res.data.data;
+			axios.get(th.url + '/shipperInfo/selectAll').then(function(res) {
+				th.shipperInfo = res.data.data;
 			})
 			axios.get(th.url + '/vehicleType/selectGroup').then(function(res) {
 				th.vehicleType = res.data.data;
 			})
-			axios.get(th.url + '/vehicle/selectAll').then(function(res) {
-				th.vehicle = res.data.data;
+			axios.get(th.url + '/vehicleInfo/selectAll').then(function(res) {
+				th.vehicleInfo = res.data.data;
 			})
 			this.changePage(1);
 		}

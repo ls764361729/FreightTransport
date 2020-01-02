@@ -6,7 +6,7 @@
 <template>
 	<div>
 			<div class="rigtop">
-				<Form ref="shipperInformation" inline>
+				<Form ref="shipperInfo" inline>
 					<FormItem>
 						<Row>
 							<Col span="8" style="text-align: center;">
@@ -72,18 +72,18 @@
 		</div>
 		
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="shipperInformation" :label-width="80">
+			<Form ref="formValidate" :model="shipperInfo" :label-width="80">
 				<FormItem label="姓名" prop="sName">
-					<Input v-model="shipperInformation.sName" :maxlength=6 placeholder="请输入姓名"></Input>
+					<Input v-model="shipperInfo.sName" :maxlength=6 placeholder="请输入姓名"></Input>
 				</FormItem>
 				<FormItem label="身份证号码" prop="sUuid">
-					<Input v-model="shipperInformation.sUuid" :maxlength=18 placeholder="请输入身份证号码"></Input>
+					<Input v-model="shipperInfo.sUuid" :maxlength=18 placeholder="请输入身份证号码"></Input>
 				</FormItem>
 				<FormItem label="手机号码" prop="sPhone">
-					<Input v-model="shipperInformation.sPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
+					<Input v-model="shipperInfo.sPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
 				</FormItem>
 				<FormItem label="密码" prop="sPassword">
-					<Input type="password" v-model="shipperInformation.sPassword" :maxlength=16 placeholder="请输入密码"></Input>
+					<Input type="password" v-model="shipperInfo.sPassword" :maxlength=16 placeholder="请输入密码"></Input>
 				</FormItem>
 			</Form>
 		</Modal>
@@ -133,7 +133,7 @@
 						align: 'center'
 					},{
 						title: '注册时间',
-						key: 'registerDate',
+						key: 'sRegisterDate',
 						align: 'center',
 						tooltip:true
 					},
@@ -180,7 +180,7 @@
 					}
 				],
 				data6: [],
-				shipperInformation: {
+				shipperInfo: {
 					sId: 0,
 					sName: '',
 					sSex: '',
@@ -188,7 +188,7 @@
 					sPhone: '',
 					sPassword: '',
 					dBalance: 0,
-					registerDate: ''
+					sRegisterDate: ''
 				},
 			}
 		},
@@ -196,40 +196,40 @@
 			//单击添加
 			add() {
 				this.title = "添加货主";
-				this.shipperInformation.sPhone = "";
-				this.shipperInformation.sUuid = "";
-				this.shipperInformation.sName = "";
-				this.shipperInformation.sPassword = "";
+				this.shipperInfo.sPhone = "";
+				this.shipperInfo.sUuid = "";
+				this.shipperInfo.sName = "";
+				this.shipperInfo.sPassword = "";
 				this.modal14 = true;
 			},
 			//单击编辑
 			show(data){
 				this.title = '编辑货主'
 				this.modal14 = true;
-				this.shipperInformation.sId = data.sId;
-				this.shipperInformation.sPhone = data.sPhone;
-				this.shipperInformation.sUuid = data.sUuid;
-				this.shipperInformation.sName = data.sName;
-				this.shipperInformation.sPassword = data.sPassword;
+				this.shipperInfo.sId = data.sId;
+				this.shipperInfo.sPhone = data.sPhone;
+				this.shipperInfo.sUuid = data.sUuid;
+				this.shipperInfo.sName = data.sName;
+				this.shipperInfo.sPassword = data.sPassword;
 			},
 			//弹出添加保存
 			addok() {
-				if (this.shipperInformation.sName.length < 1) {
+				if (this.shipperInfo.sName.length < 1) {
 					this.$Message.warning('请输入名字!');
 					this.modal14show();
 					return;
 				}
-				if (this.shipperInformation.sPhone.length < 1 || this.shipperInformation.sPhone.length != 11) {
+				if (this.shipperInfo.sPhone.length < 1 || this.shipperInfo.sPhone.length != 11) {
 					this.$Message.warning('电话号码不正确，需要11位手机号码!');
 					this.modal14show();
 					return;
 				}
-				if (this.shipperInformation.sPassword.length < 6 ) {
+				if (this.shipperInfo.sPassword.length < 6 ) {
 					this.$Message.warning('密码不正确,需要6位以上!');
 					this.modal14show();
 					return;
 				}
-				var text = this.shipperInformation.sUuid;
+				var text = this.shipperInfo.sUuid;
 				text = text.toUpperCase();
 				var aa = ["7", "9", "10", "5", "8", "4", "2", "1", "6", "3", "7", "9", "10", "5", "8", "4", "2"];
 				var bb = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
@@ -242,13 +242,13 @@
 					this.modal14show();
 					return;
 				}
-				this.shipperInformation.sSex = text.substring(16, 17) % 2 == 0 ? "女" : "男";
+				this.shipperInfo.sSex = text.substring(16, 17) % 2 == 0 ? "女" : "男";
 				const th = this;
 				var urls = "insert";
 				if(this.title == "编辑货主"){
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/shipperInformation/'+urls, th.shipperInformation, {
+				axios.post(th.url + '/shipperInfo/'+urls, th.shipperInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -278,7 +278,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/shipperInformation/deleteByPrimaryKey', {
+						axios.get(th.url + '/shipperInfo/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -308,7 +308,7 @@
 				if(!th.sNames){
 					th.sName='';
 				}
-				axios.get(th.url + '/shipperInformation/selectPage', {
+				axios.get(th.url + '/shipperInfo/selectPage', {
 					params: {
 						page: page,
 						sPhone: th.sPhone,

@@ -22,7 +22,7 @@ public class OrderInfoServiceImpl implements OrderInfoService {
      * @return
      */
     @Override
-    public int deleteByPrimaryKey(int id) {
+    public int deleteByPrimaryKey(String id) {
         return orderInfoMapper.deleteByPrimaryKey(id);
     }
 
@@ -44,7 +44,7 @@ public class OrderInfoServiceImpl implements OrderInfoService {
      * @return
      */
     @Override
-    public OrderInfo selectByPrimaryKey(int id) {
+    public OrderInfo selectByPrimaryKey(String id) {
         return orderInfoMapper.selectByPrimaryKey(id);
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
 import com.github.pagehelper.PageHelper;
 
 @RestController
-@RequestMapping("/locateInfo")
+@RequestMapping("/image/locateInfo")
 public class LocateInfoController {
     @Autowired
     private LocateInfoService locateInfoService;
@@ -147,9 +147,9 @@ public class LocateInfoController {
      * @return
      */
     @GetMapping("/updateSet")
-    public Result updateSet(String oId,@RequestParam(defaultValue = "0") int dId, String oState,@RequestParam(defaultValue = "0") int endDate){
+    public Result updateSet(String oId,@RequestParam(defaultValue = "0") int dId, String oState,@RequestParam(defaultValue = "0") int oEndDate){
         try {
-            if(orderInfoService.updateSet(oId,dId,oState,endDate)>0){
+            if(orderInfoService.updateSet(oId,dId,oState,oEndDate)>0){
                 return new Result(200, "操作成功！");
             }
             return new Result().error("操作失败！");

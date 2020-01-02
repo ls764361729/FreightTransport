@@ -12,7 +12,7 @@
 </style>
 <style scoped>
 	.ivu-layout-header{
-		z-manager: 999;
+		z-index: 999;
 }
 .ivu-menu-horizontal,.layout-logo,.ivu-layout-header{
 	height: 50px;
@@ -50,7 +50,7 @@
 							<div class="layout-logo" style="left:0;top:0;width: 200px;;text-align: center;padding-left: 6px;">
 								<router-Link to="/manager/">
 									<MenuItem name="控制台">
-									<h3>锦轩物流后台管理系统</h3>
+									<h3>货运运后台管理系统</h3>
 									</MenuItem>
 								</router-Link>
 							</div>
@@ -277,7 +277,7 @@
 					return;
 				}
 				th.user.mUser = localStorage.getItem("mUser");
-				axios.get(th.url + '/admin/updatePassword', {
+				axios.get(th.url + '/manager/updatePassword', {
 					params: {
 						id: th.user.mUser,
 						old: th.user.password,
@@ -322,7 +322,7 @@
 			var th =this;
 			axios.get(th.url + '/notice/selectDirection', {
 					params: {
-						direction: '管理员'
+						nDirection: '管理员'
 					}
 				})
 			.then(function(res) {

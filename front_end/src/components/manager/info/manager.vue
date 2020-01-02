@@ -8,9 +8,9 @@
 		<div class="rigtop">
 			<Form ref="shipperInformation" inline>
 				<FormItem>
-					<Row >
+					<Row>
 						<Col span="8" style="text-align: center;">
-						<label >查询账号</label>
+						<label>查询账号</label>
 						</Col>
 						<Col span="16">
 						<Input height="20" placeholder="模糊查询账号"></Input>
@@ -18,7 +18,7 @@
 					</Row>
 				</FormItem>
 				<FormItem style="position: relative;left: 10px">
-					<Button @click="changePage()(1)">
+					<Button @click="changePage(1)">
 						<Icon type="ios-sync" />快速查询
 					</Button>
 				</FormItem>
@@ -44,23 +44,23 @@
 			</div>
 		</div>
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="admin" :label-width="80">
-				<FormItem label="账号" prop="aAccount">
-					<Input v-model="admin.aAccount" :maxlength=20 placeholder="请输入账号"></Input>
+			<Form ref="formValidate" :model="manager" :label-width="80">
+				<FormItem label="账号" prop="mAccount">
+					<Input v-model="manager.mAccount" :maxlength=20 placeholder="请输入账号"></Input>
 				</FormItem>
-				<FormItem label="密码" prop="aPassword">
-					<Input type="password" v-model="admin.aPassword" :maxlength=20 placeholder="请输入密码"></Input>
+				<FormItem label="密码" prop="mPassword">
+					<Input type="password" v-model="manager.mPassword" :maxlength=20 placeholder="请输入密码"></Input>
 				</FormItem>
-				<FormItem label="手机号码" prop="aPhone">
-					<Input type="password" v-model="admin.aPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
+				<FormItem label="手机号码" prop="mPhone">
+					<Input  v-model="manager.mPhone" :maxlength=11 placeholder="请输入手机号码"></Input>
 				</FormItem>
-				<FormItem label="权限" prop="aRank">
-				<Select v-model="admin.aRank" style="width: 150px;">
-					<Option v-for="item in qx" :value="item.value" :key="item.value">{{ item.label }}</Option>
-				</Select>
+				<FormItem label="权限" prop="mRank">
+					<Select v-model="manager.mRank" style="width: 150px;">
+						<Option v-for="item in qx" :value="item.value" :key="item.value">{{ item.label }}</Option>
+					</Select>
 				</FormItem>
-				<FormItem label="备注" prop="remarks">
-					<Input v-model="admin.remarks" type='textarea' :autosize="{minRows: 5,maxRows: 6}" placeholder="备注"></Input>
+				<FormItem label="备注" prop="mRemarks">
+					<Input v-model="manager.mRemarks" type='textarea' :autosize="{minRows: 5,maxRows: 6}" placeholder="备注"></Input>
 				</FormItem>
 			</Form>
 		</Modal>
@@ -73,7 +73,7 @@
 				modal14loading: true,
 				loading: true,
 				modal14: false,
-				loading: true,
+				title:"",
 				qx: [{
 						value: '高级管理员',
 						label: '高级管理员'
@@ -87,26 +87,26 @@
 				count: 10,
 				columns7: [{
 						title: '编号',
-						key: 'aId',
+						key: 'mId',
 						align: 'center',
 						width: 100
-					},{
+					}, {
 						title: '账号',
-						key: 'aAccount',
+						key: 'mAccount',
 						align: 'center',
-					},{
+					}, {
 						title: '手机号码',
-						key: 'aPhone',
+						key: 'mPhone',
 						align: 'center',
 					},
 					{
 						title: '权限',
-						key: 'aRank',
+						key: 'mRank',
 						align: 'center',
 						tooltip: true
-					},{
+					}, {
 						title: '备注',
-						key: 'remarks',
+						key: 'mRemarks',
 						tooltip: true,
 						align: 'center'
 					},
@@ -139,7 +139,7 @@
 									on: {
 										click: () => {
 
-											this.remove(params.row.aId)
+											this.remove(params.row.mId)
 										}
 									}
 								}, '移除')
@@ -148,46 +148,46 @@
 					}
 				],
 				data6: [],
-				admin:{
-					aId:0,
-					aAccount:'',
-					aPassword:'',
-					aPhone:'',
-					aRank:'',
-					remarks:''
+				manager: {
+					mId: 0,
+					mAccount: '',
+					mPassword: '',
+					mPhone: '',
+					mRank: '',
+					mRemarks: ''
 				}
 			}
 		},
 		methods: {
 			//单击添加
-				add() {
-					this.title = "添加管理员信息";
-					this.admin.aAccount = "";
-					this.admin.aPassword = "";
-					this.admin.aPhone = "";
-					this.admin.aRank = "";
-					this.admin.remarks = "";
-					this.modal14 = true;
-				},
-				//单击编辑
-				show(data) {
-					this.title = '编辑管理员信息'
-					this.admin.aId = data.aId;
-					this.admin.aAccount = data.aAccount;
-					this.admin.aPassword = data.aPassword;
-					this.admin.aPhone = data.aPhone;
-					this.admin.aRank = data.aRank;
-					this.admin.remarks = data.remarks;
-					this.modal14 = true;
-				},
-				//弹出添加保存
-				addok(){
+			add() {
+				this.title = "添加管理员信息";
+				this.manager.mAccount = "";
+				this.manager.mPassword = "";
+				this.manager.mPhone = "";
+				this.manager.mRank = "";
+				this.manager.mRemarks = "";
+				this.modal14 = true;
+			},
+			//单击编辑
+			show(data) {
+				this.title = '编辑管理员信息'
+				this.manager.mId = data.mId;
+				this.manager.mAccount = data.mAccount;
+				this.manager.mPassword = data.mPassword;
+				this.manager.mPhone = data.mPhone;
+				this.manager.mRank = data.mRank;
+				this.manager.mRemarks = data.mRemarks;
+				this.modal14 = true;
+			},
+			//弹出添加保存
+			addok() {
 				const th = this;
 				var urls = "insert";
 				if (this.title == "编辑管理员信息") {
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/admin/' + urls, th.admin, {
+				axios.post(th.url + '/_manager/' + urls, th.manager, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -201,8 +201,8 @@
 						th.$Message.error(res.data.message);
 					}
 				})
-			
-			
+
+
 			},
 			modal14show() {
 				this.modal14 = false;
@@ -217,7 +217,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/admin/deleteByPrimaryKey', {
+						axios.get(th.url + '/_manager/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -241,8 +241,7 @@
 			//查询
 			changePage(page) {
 				const th = this;
-				console.log(th.url);
-				axios.get(th.url + '/admin/selectPage', {
+				axios.get(th.url + '/_manager/selectPage', {
 					params: {
 						page: page
 					}

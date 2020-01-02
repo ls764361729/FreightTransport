@@ -35,9 +35,9 @@ const routes = [{
 				name: 'intransported',
 				component: () => import('../components/driver/ordermanager/intransported.vue')
 			}, {
-				path: '/driver/tobetransported',
-				name: 'tobetransported',
-				component: () => import('../components/driver/ordermanager/tobetransported.vue')
+				path: '/driver/complete',
+				name: 'complete',
+				component: () => import('../components/driver/ordermanager/complete.vue')
 			}, {
 				path: '/driver/personalinfo',
 				name: 'personalinfo',
@@ -55,10 +55,6 @@ const routes = [{
 				path: '/driver/maporder',
 				name: 'maporder',
 				component: () => import('../components/driver/maporder.vue')
-			}, {
-				path: '/driver/quickorder',
-				name: 'quickorder',
-				component: () => import('../components/driver/quickorder.vue')
 			}
 		]
 	},

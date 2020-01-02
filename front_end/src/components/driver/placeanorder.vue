@@ -1,342 +1,226 @@
+<style>
+	.ivu-table td, .ivu-table-border td{
+		height: 41px;
+	}
+</style>
 <template>
-	<div class="amap-page-container">
-		<Form ref="formValidate" :model="orderInformation" :label-width="80" style="margin-top:10px">
-			<Row>
-				<Col span="8">
-				<FormItem label="车辆类型" prop="oType">
-					<Select v-model="orderInformation.oType" filterable>
-						<Option v-for="item in vehicleType" :value="item.tId" :key="item.vName">{{ item.vName }}</Option>
-					</Select>
+	<div>
+		<div id="container"></div>
+		<div class="rigtop">
+			<Form ref="shipperInfo" inline>
+				<FormItem>
+					<Row>
+						<Col span="8" style="text-align: center;">
+						<Checkbox v-model="ddbhs">订单编号</Checkbox>
+						</Col>
+						<Col span="16">
+						<Input height="20" v-model="orderInfo.oId" placeholder="模糊查询订单编号"></Input>
+						</Col>
+					</Row>
 				</FormItem>
-				</Col>
-				<Col span="8">
-				<FormItem label="联系人电话" prop="contacts">
-					<Input v-model="orderInformation.contacts" :maxlength=11 placeholder="请输入联系人电话"></Input>
+				<FormItem>
+					<Row>
+						<Col span="8" style="text-align: center;">
+						<Checkbox v-model="lxhms">联系号码</Checkbox>
+						</Col>
+						<Col span="16">
+						<Input height="20" v-model="orderInfo.oContacts" placeholder="模糊查询联系人手机号码"></Input>
+						</Col>
+					</Row>
 				</FormItem>
-				</Col>
-				<Col span="8">
-				<FormItem label="预约时间" prop="startDate">
-					<DatePicker type="datetime" format="yyyy-MM-dd HH:mm:ss" @on-change="datesa()" placeholder="请选择预约时间" v-model="orderInformation.startDate"
-					 style="width: 200px"></DatePicker>
+				<FormItem style="position: relative;left: 10px">
+					<Button @click="changePage(1)">
+						<Icon type="ios-sync" />快速查询
+					</Button>
 				</FormItem>
-				</Col>
-			</Row>
-			<Row>
-				<FormItem label="发货地址" prop="shippingAddress">
-					<Col span="3">
-					<Input v-model="fhcs" :maxlength=5 placeholder="请输入发货城市"></Input>
-					</Col>
-					<Col span="6">
-					<Select v-model="fh" filterable remote :remote-method="remoteMethod1" :loading="loading1">
-						<Option v-for="(option, index) in options1" :value="option.name" :key="option.index">{{option.name}}</Option>
-					</Select>
-					</Col>
-					<Col span="2">
-					<span>高德发货地址</span>
-					</Col>
-					<Col span="6">
-					<Input v-model="orderInformation.shippingAddress" :maxlength=30 placeholder="发货地址"></Input>
-					</Col>
-				</FormItem>
-			</Row>
-			<FormItem label="收货地址" prop="receivingAddress">
-				<Col span="3">
-				<Input v-model="shcs" :maxlength=5 placeholder="请输入收货城市"></Input>
-				</Col>
-				<Col span="6">
-				<Select v-model="sh" filterable remote :remote-method="remoteMethod2" :loading="loading1">
-					<Option v-for="(option, index) in options2" :value="option.name" :key="option.index">{{option.name}}</Option>
-				</Select>
-				</Col>
-				<Col span="2">
-				<span>高德收货地址</span>
-				</Col>
-				<Col span="6">
-				<Input v-model="orderInformation.receivingAddress" :maxlength=30 placeholder="收货地址"></Input>
-				</Col>
-			</FormItem>
-			<Row>
-				<Col span="8">
-				<FormItem label="路程/公里" prop="oType">
-					<Input v-model="lc" disabled placeholder="自动计算"></Input>
-				</FormItem>
-				</Col>
-				<Col span="8">
-				<FormItem label="时间/分钟" prop="contacts">
-					<Input v-model="sj" disabled placeholder="自动计算"></Input>
-				</FormItem>
-				</Col>
-				<Col span="8">
-				<FormItem label="订单价格" prop="price">
-					<Input v-model="orderInformation.price" :maxlength=18 disabled placeholder="自动计算"></Input>
-				</FormItem>
-				</Col>
-			</Row>
-
-			<Row>
-				<FormItem label="订单备注" prop="sId">
-					<Input v-model="orderInformation.oRemarks" type="textarea" :autosize="{minRows: 3,maxRows: 5}" placeholder="备注"></Input>
-				</FormItem>
-			</Row>
-			<Button type="success" style="width:100%" onclick="return false" @click="ljyy()">立即预约</Button>
-		</Form>
+			</Form>
+		</div>
+		<Table border :columns="columns7" :data="data6" height="450" :loading="loading" stripe size='default' ref="table"></Table>
+		<div style="margin: 10px;overflow: hidden">
+			<div style="float: right;">
+				<Page :total="count" :current="1" @on-change="changePage($event)"></Page>
+			</div>
+		</div>
 	</div>
 </template>
-
 <script>
-	
 	export default {
-		data: function() {
+		data() {
 			return {
-				lc: '',
-				sj: '',
-				url: "http://localhost:8080",
+				modal14: false,
+				loading: true,
 				vehicleType: "",
-				collectionFee: '',
-				model13: '',
-				fhcs: '',
-				collectionFees: {
-					cId: 0,
-					cDate: '',
-					mileage: '',
-					cStarting: 12,
-					remarks: '',
-					cType: ''
-				},
-				shcs: '',
-				sh: '',
-				fh: '',
-				fhlocation: '',
-				shlocation: '',
-				loading1: false,
-				options1: [],
-				options2: [],
-				locations: {
-					id: 0,
-					addName: "",
-					addIp: "",
-					endIp: "",
-					endName: "",
-					price: 12,
-					type: 5,
-					peiYong: "",
-					peiYongs: ""
-				},
-				orderInformation: {
+				vehicleInfo: "",
+				ddbhs: false,
+				lxhms: false,
+				url: "http://localhost:8080",
+				count: 10,
+				shipperInfo: "",
+				columns7: [{
+						title: '订单编号',
+						key: 'oId',
+						align: 'center',
+						width: 100
+					},
+					{
+						title: '联系人手机',
+						key: 'oContacts',
+						align: 'center',
+						tooltip: true
+					},
+					{
+						title: '预约时间',
+						key: 'oStartDate',
+						align: 'center'
+					}, {
+						title: '订单价格',
+						key: 'oPrice',
+						tooltip: true,
+						align: 'center'
+					}, {
+						title: '发货地址',
+						key: 'oShippingAddress',
+						tooltip: true,
+						align: 'center'
+					}, {
+						title: '收货地址',
+						key: 'oReceivingAddress',
+						tooltip: true,
+						align: 'center'
+					}, {
+						title: '货主编号',
+						key: 'sId',
+						tooltip: true,
+						align: 'center'
+					}, {
+						title: '订单状态',
+						key: 'oState',
+						tooltip: true,
+						align: 'center'
+					}, {
+						title: '操作',
+						key: 'action',
+						width: 150,
+						align: 'center',
+						render: (h, params) => {
+							return h('div', [
+								h('Button', {
+									props: {
+										type: 'primary',
+										size: 'small'
+									},
+									style: {
+										marginRight: '5px'
+									},
+									on: {
+										click: () => {
+											this.add(params.row.oId,params.row.oShippingAddress, params.row.oReceivingAddress);
+										}
+									}
+								}, '接单导航')
+							]);
+						}
+					}
+				],
+				data6: [],
+				orderInfo: {
 					oId: 0,
 					oType: "",
-					contacts: "",
+					oContacts: "",
 					oRemarks: "",
-					startDate: new Date(),
-					price: "",
-					shippingAddress: "",
-					receivingAddress: "",
-					sId: 1,
+					oStartDate: "",
+					oEndDate: "",
+					oPrice: "",
+					oShippingAddress: "",
+					oReceivingAddress: "",
+					sId: 0,
+					dId: 0,
 					oState: "待运输",
-					eId: 0
+					eId: 0,
 				}
-			};
+			}
 		},
-
 		methods: {
-			remoteMethod1(query) {
+			//查询
+			changePage(page) {
+				const th = this;
+				if (!th.ddbhs) {
+					th.orderInfo.oId = '';
+				}
+				if (!th.lxhms) {
+					th.orderInfo.oContacts = '';
+				}
+				axios.get(th.url + '/orderInfo/selectStart', {
+					params: {
+						page: page,
+						oId: th.orderInfo.oId,
+						oStart: '待运输',
+						oContacts: th.orderInfo.oContacts
+					}
+				}).then(function(res) {
+					th.data6 = res.data.data;
+					th.count = res.data.count;
+				})
+				th.loading = false;
+			},
+			add(oId,start, end) {
 				var th = this;
-				if (th.fhcs.length == 0) {
-					return;
-				}
-				if (query.length > 0) {
-					axios.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
-						'&type=&location=&city=' + th.fhcs + '&datatype=all',
-						function(res) {
-							if (res.tips.length > 0) {
-								th.loading1 = true;
-								setTimeout(() => {
-									th.loading1 = false;
-									th.options1 = res.tips;
-									th.orderInformation.shippingAddress = th.options1[0].district + query;
-									th.fhlocation = th.options1[0].location;
-									console.log("发货："+th.options1[0].location);
-									if (th.orderInformation.receivingAddress.length > 1 && th.orderInformation.shippingAddress.length > 1) {
-										th.datesa();
-									}
-								}, 50);
-							}
-						});
-				}
-			},
-			remoteMethod2(query) {
-				var th = this;
-				if (th.shcs.length == 0) {
-					return;
-				}
-				if (query.length > 0) {
-					axios.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
-						'&type=&location=&city=' + th.fhcs + '&datatype=all',
-						function(res) {
-							if (res.tips.length > 0) {
-								th.loading1 = true;
-								setTimeout(() => {
-									th.loading1 = false;
-									th.options2 = res.tips;
-									th.orderInformation.receivingAddress = th.options2[0].district + query;
-									th.shlocation = th.options2[0].location;
-									console.log("收货："+th.options2[0].location);
-									th.datesa();
-								}, 100);
-							}
-						})
-				}
-			},
-
-			//除法函数，用来得到精确的除法结果
-			//说明：javascript的除法结果会有误差，在两个浮点数相除的时候会比较明显。这个函数返回较为精确的除法结果。
-			//调用：accDiv(arg1,arg2)
-			//返回值：arg1除以arg2的精确结果
-			accDiv(arg1, arg2) {
-				var t1 = 0,
-					t2 = 0,
-					r1, r2;
-				try {
-					t1 = arg1.toString().split(".")[1].length
-				} catch (e) {}
-				try {
-					t2 = arg2.toString().split(".")[1].length
-				} catch (e) {}
-					r1 = Number(arg1.toString().replace(".", ""));
-					r2 = Number(arg2.toString().replace(".", ""));
-				return (r1 / r2) * Math.pow(10, t2 - t1);
-			},
-			//乘法函数，用来得到精确的乘法结果
-			//说明：javascript的乘法结果会有误差，在两个浮点数相乘的时候会比较明显。这个函数返回较为精确的乘法结果。
-			//调用：accMul(arg1,arg2)
-			//返回值：arg1乘以arg2的精确结果
-			accMul(arg1, arg2) {
-				var m = 0,
-					s1 = arg1.toString(),
-					s2 = arg2.toString();
-				try {
-					m += s1.split(".")[1].length
-				} catch (e) {}
-				try {
-					m += s2.split(".")[1].length
-				} catch (e) {}
-				return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
-			},
-			//加法函数，用来得到精确的加法结果
-			//说明：javascript的加法结果会有误差，在两个浮点数相加的时候会比较明显。这个函数返回较为精确的加法结果。
-			//调用：accAdd(arg1,arg2)
-			//返回值：arg1加上arg2的精确结果
-			accAdd(arg1, arg2) {
-				var r1, r2, m;
-				try {
-					r1 = arg1.toString().split(".")[1].length;
-				} catch (e) {
-					r1 = 0;
-				}
-				try {
-					r2 = arg2.toString().split(".")[1].length;
-				} catch (e) {
-					r2 = 0;
-				}
-				m = Math.pow(10, Math.max(r1, r2));
-				return (arg1 * m + arg2 * m) / m;
-			},
-			//减法函数
-			accSub(arg1, arg2) {
-				var r1, r2, m, n;
-				try {
-					r1 = arg1.toString().split(".")[1].length;
-				} catch (e) {
-					r1 = 0;
-				}
-				try {
-					r2 = arg2.toString().split(".")[1].length;
-				} catch (e) {
-					r2 = 0;
-				}
-				m = Math.pow(10, Math.max(r1, r2));
-				//last modify by deeka
-				//动态控制精度长度
-				n = (r1 >= r2) ? r1 : r2;
-				return ((arg2 * m - arg1 * m) / m).toFixed(n);
-			},
-			datesa() {
-				if (this.orderInformation.receivingAddress.length > 1 && this.orderInformation.shippingAddress.length > 1) {
-					this.locations.endName = this.orderInformation.receivingAddress;
-					this.locations.addName = this.orderInformation.shippingAddress;
-					this.locations.endIp = this.shlocation;
-					this.locations.addIp = this.fhlocation;
-					this.addss();
-				}
-			},
-			addss() {
-				var th = this;
-				axios.get(
-					'//restapi.amap.com/v3/distance?key=894fb9d68503edc13aabaf040605f538&origins=' + th.fhlocation + '&destination=' +
-					th.shlocation + '&type=1',
-					function(res) {
-						//路径距离，单位：公里 
-						th.lc = th.accDiv(res.results[0].distance,1000);
-						//预计行驶时间，单位：分钟 
-						th.sj = th.accDiv(res.results[0].duration,60);
-						th.setdates();
-					})
-			},
-			ljyy() {
-				var th = this;
-				th.orderInformation.sId = localStorage.getItem("mUser");
-				axios.post(th.url + '/orderInformation/insert', th.orderInformation, {
-					headers: {
-						"Content-Type": "application/json;charset=utf-8"
+				this.loading = true;
+				axios.get(th.url + '/orderInfo/updateSet', {
+					params: {
+						oId: oId,
+						dId: localStorage.getItem("mUser"),
+						oState: "运输中"
 					}
 				}).then(function(res) {
 					if (res.data.code === 200) {
-						th.$Message.success("预约成功");
-						th.locations.peiYong = res.data.message;
-						axios.post(th.url + '/image/locations/insert', th.locations, {
-							headers: {
-								"Content-Type": "application/json;charset=utf-8"
-							}
-						}).then(function(res) {
-							if (res.data.code === 200) {
-								th.$Message.success("导入地图成功！");
-							} else {
-								th.$Message.error("导入地图失败");
-							}
+						th.$Message.success("接单成功，正在调转导航！");
+						th.changePage(1);
+						var map = new AMap.Map("container", {
+							resizeEnable: true,
+							zoom: 20 //这里设置没有用，create()函数里面new maker时会把zoom改成默认值
 						})
-						window.location.href = "#/khindex";
-					} else {
-						th.$Message.error(res.data.message);
-					}
+						AMap.plugin(["AMap.Driving"], function() {
+							var drivingOption = {
+								policy: AMap.DrivingPolicy.LEAST_TIME,
+								map: map
+							};
+							var driving = new AMap.Driving(drivingOption); //构造驾车导航类
+							//根据起终点坐标规划驾车路线
+							driving.search([{
+								keyword: start
+							}, {
+								keyword: end
+							}], function(status, result) {
+								th.loading = false;
+								driving.searchOnAMAP({
+									origin: result.origin,
+									destination: result.destination
+								});
+							});
+						
+						});
+						map.addControl(new AMap.ToolBar());
+						}else{
+							th.loading = false;
+							th.changePage(1);
+							th.$Message.error("接单失败！");
+						}
 				})
-			},
-			setdates() {
-				var th = this;
-				var now = this.orderInformation.startDate,
-					hour = now.getHours();
-				if (hour > 6 && hour < 22) {
-					th.cDate = 1.2;
-					th.mileage = 1.0;
-
-				} else {
-					th.cDate = 1.5;
-					th.mileage = 1.2;
-				}
-				th.orderInformation.price = th.accAdd(th.accMul(th.lc,th.mileage),th.accMul(th.cDate,th.sj));
-				if (th.orderInformation.price < 12) {
-					th.orderInformation.price = 12;
-				}
-				th.locations.price = th.orderInformation.price;
-			},
+			}
 		},
 		created() {
 			var th = this;
+			axios.get(th.url + '/shipperInfo/selectAll').then(function(res) {
+				th.shipperInfo = res.data.data;
+			})
 			axios.get(th.url + '/vehicleType/selectGroup').then(function(res) {
 				th.vehicleType = res.data.data;
 			})
-			axios.get(th.url + '/collectionFee/selectAll').then(function(res) {
-				th.collectionFee = res.data.data;
+			axios.get(th.url + '/vehicleInfo/selectAll').then(function(res) {
+				th.vehicleInfo = res.data.data;
 			})
+			this.changePage(1);
 		}
-	};
+	}
 </script>

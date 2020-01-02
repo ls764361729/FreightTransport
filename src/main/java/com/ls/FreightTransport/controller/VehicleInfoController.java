@@ -108,16 +108,35 @@ public class VehicleInfoController {
      * @return
      */
     @GetMapping("/selectPage")
-    public Result selectPage(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int limit, String license,  String iId) {
+    public Result selectPage(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int limit, String vLicense,  String vId) {
         try {
             PageHelper.startPage(page, limit);
-            if("".equals(iId))
-                iId = null;
-            List<VehicleInfo> list = vehicleInfoService.selectAll(license,iId);
+            if("".equals(vId))
+                vId = null;
+            List<VehicleInfo> list = vehicleInfoService.selectAll(vLicense,vId);
             if (list == null) {
                 return new Result().successMessage("无数据");
             } else {
-                return new Result(0, "ok", list, vehicleInfoService.count(license,iId));
+                return new Result(0, "ok", list, vehicleInfoService.count(vLicense,vId));
+            }
+        } catch (Exception ex) {
+            return new Result().error(ex.getMessage());
+        }
+    }
+    /**
+     * 根据主键查找对象  最多只能返回一个对象
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/selectById")
+    public Result selectById(int id) {
+        try {
+            VehicleInfo vehicleInfo = vehicleInfoMapper.selectdId(id);
+            if (vehicleInfo == null) {
+                return new Result().error("无数据");
+            } else {
+                return new Result().success(vehicleInfo);
             }
         } catch (Exception ex) {
             return new Result().error(ex.getMessage());

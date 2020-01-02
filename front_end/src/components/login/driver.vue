@@ -16,7 +16,7 @@
 		<div class="login">
 			<br />
 			<br />
-			<h1 style="color: white;">锦轩司机物流系统</h1>
+			<h1 style="color: white;">货运运司机登录中心</h1>
 			<br />
 			<Form style="width: 330px;margin: auto;" :model="user">
 				<div >

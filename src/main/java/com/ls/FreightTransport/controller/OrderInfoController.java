@@ -25,7 +25,7 @@ public class OrderInfoController {
      * @return
      */
     @GetMapping("/deleteByPrimaryKey")
-    public Result deleteByPrimaryKey(int id) {
+    public Result deleteByPrimaryKey(String id) {
         try {
 
             return orderInfoService.deleteByPrimaryKey(id) > 0 ? new Result().successMessage("删除成功") : Result.error("删除失败");
@@ -43,7 +43,8 @@ public class OrderInfoController {
     @PostMapping("/insert")
     public Result insert(@RequestBody OrderInfo orderInfo) {
         try {
-            return orderInfoService.insert(orderInfo) > 0 ? new Result().successMessage("添加成功！") : Result.error("添加失败！");
+            orderInfo.setoId(String.valueOf(System.currentTimeMillis()));
+            return orderInfoService.insert(orderInfo) > 0 ? new Result().successMessage(orderInfo.getoId()) : Result.error("添加失败！");
         } catch (Exception ex) {
             return new Result().error(ex.getMessage());
         }
@@ -57,7 +58,7 @@ public class OrderInfoController {
      * @return
      */
     @GetMapping("/selectByPrimaryKey")
-    public Result selectByPrimaryKey(int id) {
+    public Result selectByPrimaryKey(String id) {
         try {
             OrderInfo orderInfo1 = orderInfoService.selectByPrimaryKey(id);
             if (orderInfo1 == null) {
@@ -128,14 +129,14 @@ public class OrderInfoController {
      * @return
      */
     @GetMapping("/selectStart")
-    public Result selectPage(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int limit, String oStart, String oId, String contacts, @RequestParam(defaultValue = "0") int sId,@RequestParam(defaultValue = "0") int dId) {
+    public Result selectPage(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int limit, String oStart, String oId, String oContacts, @RequestParam(defaultValue = "0") int sId,@RequestParam(defaultValue = "0") int dId) {
         try {
             PageHelper.startPage(page, limit);
-            List<OrderInfo> list = orderInfoService.selectStart(oStart,oId,contacts,sId,dId);
+            List<OrderInfo> list = orderInfoService.selectStart(oStart,oId,oContacts,sId,dId);
             if (list == null) {
                 return new Result().successMessage("无数据");
             } else {
-                return new Result(0, "ok", list, orderInfoService.countStart(oStart,oId,contacts,sId,dId));
+                return new Result(0, "ok", list, orderInfoService.countStart(oStart,oId,oContacts,sId,dId));
             }
         } catch (Exception ex) {
             return new Result().error(ex.getMessage());
@@ -165,9 +166,9 @@ public class OrderInfoController {
      * @return
      */
     @GetMapping("/updateSet")
-    public Result updateSet(String oId,@RequestParam(defaultValue = "0") int dId, String oState,@RequestParam(defaultValue = "0") int endDate){
+    public Result updateSet(String oId,@RequestParam(defaultValue = "0") int dId, String oState,@RequestParam(defaultValue = "0") int oEndDate){
         try {
-            if(orderInfoService.updateSet(oId,dId,oState,endDate)>0){
+            if(orderInfoService.updateSet(oId,dId,oState,oEndDate)>0){
                 return new Result(200, "操作成功！");
             }
             return new Result().error("操作失败！");

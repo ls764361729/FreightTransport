@@ -6,14 +6,14 @@
 <template>
 	<div>
 		<div class="rigtop">
-			<Form ref="evaluationInformation" inline>
+			<Form ref="evaluationInfo" inline>
 				<FormItem>
 					<Row>
 						<Col span="8" style="text-align: center;">
 						<Checkbox label="" v-model="sName">货主姓名</Checkbox>
 						</Col>
 						<Col span="16">
-						<Input height="20" placeholder="模糊查询货主姓名"  v-model="evaluationInformation.sName"></Input>
+						<Input height="20" placeholder="模糊查询货主姓名"  v-model="evaluationInfo.sName"></Input>
 						</Col>
 					</Row>
 				</FormItem>
@@ -23,7 +23,7 @@
 						<Checkbox label="" v-model="dName">司机姓名</Checkbox>
 						</Col>
 						<Col span="16">
-						<Input height="20" placeholder="模糊查询司机姓名" v-model="evaluationInformation.dName"></Input>
+						<Input height="20" placeholder="模糊查询司机姓名" v-model="evaluationInfo.dName"></Input>
 						</Col>
 					</Row>
 				</FormItem>
@@ -67,43 +67,43 @@
 		</div>
 
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="evaluationInformation" :label-width="80">
+			<Form ref="formValidate" :model="evaluationInfo" :label-width="80">
 				<FormItem label="货主名字" prop="sName">
 					<Row>
 						<Col span="13">
-						<Select v-model="evaluationInformation.sId" @on-change="sNameadd($event)" filterable>
-							<Option v-for="item in shipperInformation" :value="item.sId" :key="item.sName">{{ item.sName }}</Option>
+						<Select v-model="evaluationInfo.sId" @on-change="sNameadd($event)" filterable>
+							<Option v-for="item in shipperInfo" :value="item.sId" :key="item.sName">{{ item.sName }}</Option>
 						</Select>
 						</Col>
 						<Col span="4">货主编号：</Col>
 						<Col span="7">
-						<Input disabled="disabled" :value="evaluationInformation.sId" />
+						<Input disabled="disabled" :value="evaluationInfo.sId" />
 						</Col>
 					</Row>
 				</FormItem>
 				<FormItem label="司机名字" prop="dName">
 					<Row>
 						<Col span="13">
-						<Select v-model="evaluationInformation.dId" @on-change="dNameadd($event)" filterable>
-							<Option v-for="item in driverInformation" :value="item.dId" :key="item.dName">{{ item.dName }}</Option>
+						<Select v-model="evaluationInfo.dId" @on-change="dNameadd($event)" filterable>
+							<Option v-for="item in driverInfo" :value="item.dId" :key="item.dName">{{ item.dName }}</Option>
 						</Select>
 						</Col>
 						<Col span="4">司机编号：</Col>
 						<Col span="7">
-						<Input disabled="disabled" :value="evaluationInformation.dId" />
+						<Input disabled="disabled" :value="evaluationInfo.dId" />
 						</Col>
 					</Row>
 				</FormItem>
-				<FormItem label="评价分数" prop="fraction">
-					<Rate show-text allow-half v-model="evaluationInformation.fraction">
-						<span style="color: #f5a623">{{ evaluationInformation.fraction }}</span>
+				<FormItem label="评价分数" prop="eFraction">
+					<Rate show-text allow-half v-model="evaluationInfo.eFraction">
+						<span style="color: #f5a623">{{ evaluationInfo.eFraction }}</span>
 					</Rate>
 				</FormItem>
-				<FormItem label="订单编号" prop="fraction">
-					<Input v-model="evaluationInformation.oId" placeholder="请输入订单编号"></Input>
+				<FormItem label="订单编号" prop="eFraction">
+					<Input v-model="evaluationInfo.oId" placeholder="请输入订单编号"></Input>
 				</FormItem>
 				<FormItem label="评价内容" prop="eContent">
-					<Input v-model="evaluationInformation.eContent" type="textarea" :autosize="{minRows: 6,maxRows: 8}" placeholder="内容"></Input>
+					<Input v-model="evaluationInfo.eContent" type="textarea" :autosize="{minRows: 6,maxRows: 8}" placeholder="内容"></Input>
 				</FormItem>
 			</Form>
 		</Modal>
@@ -145,14 +145,14 @@
 				],
 				url: "http://localhost:8080",
 				count: 10,
-				driverInformation: '',
-				shipperInformation: '',
-				evaluationInformation: {
+				driverInfo: '',
+				shipperInfo: '',
+				evaluationInfo: {
 					eId: 0,
 					dId: 0,
 					oId: 0,
 					sId: 0,
-					fraction: 5,
+					eFraction: 5,
 					eContent: "",
 					sName: "",
 					dName: ""
@@ -176,7 +176,7 @@
 					},
 					{
 						title: '评价分数',
-						key: 'fraction',
+						key: 'eFraction',
 						align: 'center',
 					}, {
 						title: '订单编号',
@@ -241,41 +241,41 @@
 		},
 		methods: {
 			dNameadd(e) {
-				for (var i = 0; i < this.driverInformation.length; i++) {
-					if ((this.driverInformation[i].dId) == e) {
-						this.evaluationInformation.dName = this.driverInformation[i].dName;
+				for (var i = 0; i < this.driverInfo.length; i++) {
+					if ((this.driverInfo[i].dId) == e) {
+						this.evaluationInfo.dName = this.driverInfo[i].dName;
 					}
 				}
 			},
 			sNameadd(e) {
-				for (var i = 0; i < this.shipperInformation.length; i++) {
-					if ((this.shipperInformation[i].sId) == e) {
-						this.evaluationInformation.sName = this.shipperInformation[i].sName;
+				for (var i = 0; i < this.shipperInfo.length; i++) {
+					if ((this.shipperInfo[i].sId) == e) {
+						this.evaluationInfo.sName = this.shipperInfo[i].sName;
 					}
 				}
 			},
 			//单击添加
 			add() {
 				this.title = "添加评价信息";
-				this.evaluationInformation.fraction = 5;
-				this.evaluationInformation.eId = 0;
-				this.evaluationInformation.dId = 0;
-				this.evaluationInformation.oId = 0;
-				this.evaluationInformation.sId = 0;
-				this.evaluationInformation.eContent = "";
+				this.evaluationInfo.eFraction = 5;
+				this.evaluationInfo.eId = 0;
+				this.evaluationInfo.dId = 0;
+				this.evaluationInfo.oId = 0;
+				this.evaluationInfo.sId = 0;
+				this.evaluationInfo.eContent = "";
 				this.modal14 = true;
 			},
 			//单击编辑
 			show(data) {
 				this.title = '编辑评价信息'
-				this.evaluationInformation.eId = data.eId;
-				this.evaluationInformation.dId = data.dId;
-				this.evaluationInformation.oId = data.oId;
-				this.evaluationInformation.sId = data.sId;
-				this.evaluationInformation.fraction = data.fraction;
-				this.evaluationInformation.eContent = data.eContent;
-				this.evaluationInformation.sName = data.sName;
-				this.evaluationInformation.dName = data.dName;
+				this.evaluationInfo.eId = data.eId;
+				this.evaluationInfo.dId = data.dId;
+				this.evaluationInfo.oId = data.oId;
+				this.evaluationInfo.sId = data.sId;
+				this.evaluationInfo.eFraction = data.eFraction;
+				this.evaluationInfo.eContent = data.eContent;
+				this.evaluationInfo.sName = data.sName;
+				this.evaluationInfo.dName = data.dName;
 				this.modal14 = true;
 			},
 			//弹出添加保存
@@ -285,7 +285,7 @@
 				if (this.title == "编辑评价信息") {
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/evaluationInformation/' + urls, th.evaluationInformation, {
+				axios.post(th.url + '/evaluationInfo/' + urls, th.evaluationInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -315,7 +315,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/evaluationInformation/deleteByPrimaryKey', {
+						axios.get(th.url + '/evaluationInfo/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -343,17 +343,17 @@
 					this.fsid = 0;
 				}
 				if(!th.sName){
-					this.evaluationInformation.sName = '';
+					this.evaluationInfo.sName = '';
 				}
 				if(!th.dName){
-					this.evaluationInformation.dName = '';
+					this.evaluationInfo.dName = '';
 				}
-				axios.get(th.url + '/evaluationInformation/selectPage', {
+				axios.get(th.url + '/evaluationInfo/selectPage', {
 					params: {
 						page: page,
 						fsid:th.fsid,
-						sName:th.evaluationInformation.sName,
-						dName:th.evaluationInformation.dName
+						sName:th.evaluationInfo.sName,
+						dName:th.evaluationInfo.dName
 					}
 				}).then(function(res) {
 					th.data6 = res.data.data;
@@ -365,11 +365,11 @@
 		},
 		created() {
 			var th = this;
-			axios.get(th.url + '/driverInformation/selectAll').then(function(res) {
-				th.driverInformation = res.data.data;
+			axios.get(th.url + '/driverInfo/selectAll').then(function(res) {
+				th.driverInfo = res.data.data;
 			})
-			axios.get(th.url + '/shipperInformation/selectAll').then(function(res) {
-				th.shipperInformation = res.data.data;
+			axios.get(th.url + '/shipperInfo/selectAll').then(function(res) {
+				th.shipperInfo = res.data.data;
 			})
 			this.changePage(1);
 		}

@@ -13,7 +13,7 @@
 						<Checkbox label="车牌号" v-model="cbh">车牌号</Checkbox>
 						</Col>
 						<Col span="16">
-						<Input height="10" placeholder="模糊查询车牌号" v-model="license" ></Input>
+						<Input height="10" placeholder="模糊查询车牌号" v-model="vLicense" ></Input>
 						</Col>
 					</Row>
 				</FormItem>
@@ -23,7 +23,7 @@
 						<Checkbox label="车辆类型"v-model="types" >车辆类型</Checkbox>
 						</Col>
 						<Col span="16">
-						<Select v-model="iId"   filterable>
+						<Select v-model="vId"   filterable>
 							<Option v-for="item in vehicleType" :value="item.tId" :key="item.vName">{{ item.vName }}</Option>
 						</Select>
 						</Col>
@@ -57,37 +57,37 @@
 		</div>
 
 		<Modal v-model="modal14" :loading="modal14loading" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="vehicle" :label-width="80">
-				<FormItem label="车牌号" prop="license">
-					<Input v-model="vehicle.license" :maxlength=10 placeholder="请输入车牌号"></Input>
+			<Form ref="formValidate" :model="vehicleInfo" :label-width="80">
+				<FormItem label="车牌号" prop="vLicense">
+					<Input v-model="vehicleInfo.vLicense" :maxlength=10 placeholder="请输入车牌号"></Input>
 				</FormItem>
 				<FormItem label="品牌" prop="vType">
-					<Input v-model="vehicle.vType" :maxlength=10 placeholder="请输入品牌"></Input>
+					<Input v-model="vehicleInfo.vType" :maxlength=10 placeholder="请输入品牌"></Input>
 				</FormItem>
 				<FormItem label="车颜色" prop="vColor">
-					<Input v-model="vehicle.vColor" :maxlength=20 placeholder="请输入车颜色"></Input>
+					<Input v-model="vehicleInfo.vColor" :maxlength=20 placeholder="请输入车颜色"></Input>
 				</FormItem>
 				
 				<FormItem label="车辆类型" prop="tType">
-				<Select v-model="vehicle.tType"   filterable>
+				<Select v-model="vehicleInfo.tType"   filterable>
 					<Option v-for="item in vehicleType" :value="item.tId" :key="item.tId">{{ item.vName }}</Option>
 				</Select>
 				</FormItem>
 				<FormItem label="司机姓名" prop="dId">
 					<Row>
 						<Col span="13" >
-						<Select v-model="vehicle.dId"  filterable>
-								<Option v-for="item in driverInformation" :value="item.dId" :key="item.dId">{{ item.dName }}</Option>
+						<Select v-model="vehicleInfo.dId"  filterable>
+								<Option v-for="item in driverInfo" :value="item.dId" :key="item.dId">{{ item.dName }}</Option>
 							</Select>
 						</Col>
 						<Col span="4" >司机编号：</Col>
 						<Col span="7" >
-							<Input  disabled="disabled" :value="vehicle.dId"/>
+							<Input  disabled="disabled" :value="vehicleInfo.dId"/>
 						</Col>
 					</Row>
 				</FormItem>
-				<FormItem label="备注" prop="remarks">
-					<Input v-model="vehicle.remarks" type='textarea' :autosize="{minRows: 2,maxRows: 6}" placeholder="请输入备注"></Input>
+				<FormItem label="备注" prop="vRemarks">
+					<Input v-model="vehicleInfo.vRemarks" type='textarea' :autosize="{minRows: 2,maxRows: 6}" placeholder="请输入备注"></Input>
 				</FormItem>
 			</Form>
 		</Modal>
@@ -105,12 +105,12 @@
 				modal14loading: true,
 				loading: true,
 				modal14: false,
-				license:'',
+				vLicense:'',
 				baDate: [],
 				loading: true,
 				url: "http://localhost:8080",
 				count: 10,
-				iId:1,
+				vId:1,
 				columns7: [{
 						title: '编号',
 						key: 'vId',
@@ -119,7 +119,7 @@
 					},
 					{
 						title: '车牌号',
-						key: 'license',
+						key: 'vLicense',
 						align: 'center',
 						tooltip: true
 					},
@@ -159,7 +159,7 @@
 						align: 'center'
 					}, {
 						title: '备注',
-						key: 'remarks',
+						key: 'vRemarks',
 						width: 100,
 						align: 'center',
 						tooltip: true
@@ -202,38 +202,38 @@
 				],
 				data6: [],
 				vehicleType:"",
-				vehicle:{
-					license:'',
-					iId:'',
+				vehicleInfo:{
+					vLicense:'',
+					vId:'',
 					vType:'',
 					vColor:'',
 					tType:'',
 					dId:'',
-					remarks:'',
+					vRemarks:'',
 				},
-				driverInformation:''
+				driverInfo:''
 			}
 		},
 		methods: {
 			//单击添加
 				add() {
 					this.title = "添加车辆类型";
-					this.vehicle.license = "";
-					this.vehicle.vColor = "";
-					this.vehicle.tType = "";
-					this.vehicle.remarks =  "";
+					this.vehicleInfo.vLicense = "";
+					this.vehicleInfo.vColor = "";
+					this.vehicleInfo.tType = "";
+					this.vehicleInfo.vRemarks =  "";
 					this.modal14 = true;
 				},
 				//单击编辑
 				show(data) {
 					this.title = '编辑车辆类型'
-					this.vehicle.license = data.license;
-					this.vehicle.vId = data.vId;
-					this.vehicle.vType =  data.vType;
-					this.vehicle.vColor =  data.vColor;
-					this.vehicle.tType =  data.tType;
-					this.vehicle.dId =  data.dId;
-					this.vehicle.remarks =  data.remarks;
+					this.vehicleInfo.vLicense = data.vLicense;
+					this.vehicleInfo.vId = data.vId;
+					this.vehicleInfo.vType =  data.vType;
+					this.vehicleInfo.vColor =  data.vColor;
+					this.vehicleInfo.tType =  data.tType;
+					this.vehicleInfo.dId =  data.dId;
+					this.vehicleInfo.vRemarks =  data.vRemarks;
 					this.modal14 = true;
 				},
 				//弹出添加保存
@@ -243,7 +243,7 @@
 				if (this.title == "编辑车辆类型") {
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/vehicle/' + urls, th.vehicle, {
+				axios.post(th.url + '/vehicleInfo/' + urls, th.vehicleInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -273,7 +273,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/vehicle/deleteByPrimaryKey', {
+						axios.get(th.url + '/vehicleInfo/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -297,17 +297,17 @@
 			//查询
 			changePage(page) {
 				if(!this.cbh){
-					this.license = '';
+					this.vLicense = '';
 				}
 				if(!this.types){
-					this.iId = '';
+					this.vId = '';
 				}
 				const th = this;
-				axios.get(th.url + '/vehicle/selectPage', {
+				axios.get(th.url + '/vehicleInfo/selectPage', {
 					params: {
 						page: page,
-						license:th.license,
-						iId:th.iId
+						vLicense:th.vLicense,
+						vId:th.vId
 					}
 				}).then(function(res) {
 					if(res.data.data.length>0){
@@ -332,8 +332,8 @@
 			axios.get(th.url + '/vehicleType/selectGroup').then(function(res) {
 				th.vehicleType = res.data.data;
 			})
-			axios.get(th.url + '/driverInformation/selectAll').then(function(res) {
-				th.driverInformation = res.data.data;
+			axios.get(th.url + '/driverInfo/selectAll').then(function(res) {
+				th.driverInfo = res.data.data;
 			})
 			this.changePage(1);
 			

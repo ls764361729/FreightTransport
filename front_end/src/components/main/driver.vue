@@ -12,7 +12,7 @@
 </style>
 <style scoped>
 	.ivu-layout-header{
-		z-driver: 999;
+		z-index: 999;
 }
 .ivu-menu-horizontal,.layout-logo,.ivu-layout-header{
 	height: 50px;
@@ -50,7 +50,7 @@
 							<div class="layout-logo" style="left:0;top:0;width: 200px;;text-align: center;padding-left: 6px;">
 								<router-Link to="/driver/">
 									<MenuItem name="控制台">
-									<h3>锦轩物流司机系统</h3>
+									<h3>货运运司机系统</h3>
 									</MenuItem>
 								</router-Link>
 							</div>
@@ -153,7 +153,7 @@
 							<router-Link to="/driver/intransported">
 								<MenuItem name="运输中订单">运输中订单</MenuItem>
 							</router-Link>
-							<router-Link to="/driver/tobetransported">
+							<router-Link to="/driver/complete">
 								<MenuItem name="已完成订单">已完成订单</MenuItem>
 							</router-Link>
 						</Submenu>

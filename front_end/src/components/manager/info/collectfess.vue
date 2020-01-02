@@ -44,38 +44,38 @@
 			</div>
 		</div>
 		<Modal v-model="modal14" :loading="modal14loading" width="750" scrollable :title="title" @on-ok="addok">
-			<Form ref="formValidate" :model="collectionFee" :label-width="80">
+			<Form ref="formValidate" :model="collectFees" :label-width="80">
 				<Row>
 					<Col span="8">
 					<FormItem label="编号" prop="cId">
-						<Input v-model="collectionFee.cId" disabled placeholder="自动识别"></Input>
+						<Input v-model="collectFees.cId" disabled placeholder="自动识别"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="起步价" prop="cStarting">
-						<Input v-model="collectionFee.cStarting" :maxlength=10 placeholder="请输入起步价"></Input>
+						<Input v-model="collectFees.cStarting" :maxlength=10 placeholder="请输入起步价"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="时间收费/分钟" prop="cDate">
-						<Input v-model="collectionFee.cDate" :maxlength=20 placeholder="请输入时间收费/分钟"></Input>
+						<Input v-model="collectFees.cDate" :maxlength=20 placeholder="请输入时间收费/分钟"></Input>
 					</FormItem>
 					</Col>
 				</Row>
 				<Row>
 					<Col span="8">
-					<FormItem label="里程收费/分钟" prop="mileage">
-						<Input v-model="collectionFee.mileage" :maxlength=20 placeholder="请输入里程收费/分钟"></Input>
+					<FormItem label="里程收费/分钟" prop="cMileage">
+						<Input v-model="collectFees.cMileage" :maxlength=20 placeholder="请输入里程收费/分钟"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
 					<FormItem label="收费类型" prop="f_type">
-						<Input v-model="collectionFee.cType" :maxlength=20 placeholder="请输入收费类型"></Input>
+						<Input v-model="collectFees.cType" :maxlength=20 placeholder="请输入收费类型"></Input>
 					</FormItem>
 					</Col>
 					<Col span="8">
-					<FormItem label="备注" prop="remarks">
-						<Input v-model="collectionFee.remarks" :maxlength=20 placeholder="请输入备注"></Input>
+					<FormItem label="备注" prop="cRemarks">
+						<Input v-model="collectFees.cRemarks" :maxlength=20 placeholder="请输入备注"></Input>
 					</FormItem>
 					</Col>
 				</Row>
@@ -115,7 +115,7 @@
 					},
 					{
 						title: '里程收费/分钟',
-						key: 'mileage',
+						key: 'cMileage',
 						align: 'center'
 					},
 					{
@@ -125,7 +125,7 @@
 						align: 'center'
 					}, {
 						title: '备注',
-						key: 'remarks',
+						key: 'cRemarks',
 						tooltip: true,
 						align: 'center'
 					},
@@ -166,12 +166,12 @@
 					}
 				],
 				data6: [],
-				collectionFee: {
+				collectFees: {
 					cId:0,
 					cDate:'',
-					mileage:'',
+					cMileage:'',
 					cStarting:'',
-					remarks:'',
+					cRemarks:'',
 					cType:''
 				}
 			}
@@ -180,18 +180,18 @@
 			//单击添加
 			add() {
 				this.title = "添加收费";
-				this.collectionFee.cType = '';
+				this.collectFees.cType = '';
 				this.modal14 = true;
 			},
 			//单击编辑
 			show(data){
 				this.title = '编辑收费';
-				this.collectionFee.cId=data.cId;
-				this.collectionFee.cDate=data.cDate;
-				this.collectionFee.mileage=data.mileage;
-				this.collectionFee.cStarting=data.cStarting;
-				this.collectionFee.remarks=data.remarks;
-				this.collectionFee.cType=data.cType;
+				this.collectFees.cId=data.cId;
+				this.collectFees.cDate=data.cDate;
+				this.collectFees.cMileage=data.cMileage;
+				this.collectFees.cStarting=data.cStarting;
+				this.collectFees.cRemarks=data.cRemarks;
+				this.collectFees.cType=data.cType;
 				this.modal14 = true;
 			},
 			//弹出添加保存
@@ -201,7 +201,7 @@
 				if(this.title == "编辑收费"){
 					urls = "updateByPrimaryKey";
 				}
-				axios.post(th.url + '/collectionFee/'+urls, th.collectionFee, {
+				axios.post(th.url + '/collectFees/'+urls, th.collectFees, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -231,7 +231,7 @@
 					content: '<p>移除后不可恢复，确定继续？</p>',
 					onOk: () => {
 						const th = this;
-						axios.get(th.url + '/collectionFee/deleteByPrimaryKey', {
+						axios.get(th.url + '/collectFees/deleteByPrimaryKey', {
 							params: {
 								id: id
 							}
@@ -258,7 +258,7 @@
 				if (!th.fylxs) {
 					th.fylx = '';
 				}
-				axios.get(th.url + '/collectionFee/selectPage', {
+				axios.get(th.url + '/collectFees/selectPage', {
 					params: {
 						page: page,
 						cType:th.fylx

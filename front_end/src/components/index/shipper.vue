@@ -60,7 +60,7 @@
 		},
 		created() {
 const th = this;
-			axios.get(th.url + '/orderInformation/getCount', {
+			axios.get(th.url + '/orderInfo/getCount', {
 						params: {
 							sId:localStorage.getItem("mUser")
 						}

@@ -50,7 +50,7 @@
 							<div class="layout-logo" style="left:0;top:0;width: 200px;;text-align: center;padding-left: 6px;">
 								<router-Link to="/khindex/">
 									<MenuItem name="控制台">
-									<h3>锦轩物流货主系统</h3>
+									<h3>货运运货主系统</h3>
 									</MenuItem>
 								</router-Link>
 							</div>
@@ -147,13 +147,13 @@
 							<router-Link to="/shipper/all">
 								<MenuItem name="全部订单">全部订单</MenuItem>
 							</router-Link>
-							<router-Link to="/shipper/complete">
+							<router-Link to="/shipper/tobetransported">
 								<MenuItem name="待运输订单">待运输订单</MenuItem>
 							</router-Link>
 							<router-Link to="/shipper/intransported">
 								<MenuItem name="运输中订单">运输中订单</MenuItem>
 							</router-Link>
-							<router-Link to="/shipper/tobetransported">
+							<router-Link to="/shipper/complete">
 								<MenuItem name="已完成订单">已完成订单</MenuItem>
 							</router-Link>
 						</Submenu>
@@ -229,7 +229,7 @@
 					return;
 				}
 				th.user.mUser = localStorage.getItem("mUser");
-				axios.get(th.url + '/shipperInformation/updatePassword', {
+				axios.get(th.url + '/shipperInfo/updatePassword', {
 					params: {
 						id: th.user.mUser,
 						old: th.user.password,
@@ -241,7 +241,7 @@
 						localStorage.setItem("accessToken", null);
 						axios.get(th.url + '/login/logout');
 						setTimeout(function() {
-							window.location.href = "/adminindex";
+							window.location.href = "/";
 						}, 500);
 					} else {
 						th.modal13show();
@@ -277,7 +277,7 @@
 			this.years = data.getFullYear() + "年" + (data.getMonth() + 1) + "月" + data.getDate() + "日";
 			axios.get(th.url + '/notice/selectDirection', {
 					params: {
-						direction: '货主'
+						nDirection: '货主'
 					}
 				})
 			.then(function(res) {

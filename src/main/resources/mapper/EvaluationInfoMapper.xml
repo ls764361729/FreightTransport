@@ -70,19 +70,19 @@
   <select id="count" resultType="java.lang.Integer">
     select count (*) from evaluation_info
     <where>
-      <if test="fsid == 1">
+      <if test="sId == 1">
         and fraction  &lt;= 1
       </if>
-      <if test="fsid == 2">
+      <if test="sId == 2">
         and fraction &gt; 1 and fraction &lt;= 2
       </if>
-      <if test="fsid == 3">
+      <if test="sId == 3">
         and fraction &gt; 2 and fraction &lt;= 3
       </if>
-      <if test="fsid == 4">
+      <if test="sId == 4">
         and fraction &gt; 3 and fraction &lt;= 4
       </if>
-      <if test="fsid == 5">
+      <if test="sId == 5">
         and fraction = 5
       </if>
       <if test="dName != null">

@@ -48,15 +48,15 @@
       l_end_name = #{lEndName,jdbcType=VARCHAR},
       l_add_ip = #{lAddIp,jdbcType=VARCHAR},
       l_end_ip = #{lEndIp,jdbcType=VARCHAR},
-      l_price = #{lPrice,jdbcType=DECIMAL},
+      l_price = #{lPrice,jdbcType=DECIMAL},o_id
       l_type = #{lType,jdbcType=INTEGER},
       l_pei_yong = #{lPeiYong,jdbcType=VARCHAR},
       l_pei_yongs = #{lPeiYongs,jdbcType=VARCHAR}
     where l_id = #{lId,jdbcType=INTEGER}
   </update>
     <update id="updateType">
-       update locations
-     set  l_type = #{type}  where id = #{id}
+       update locate_info
+     set  l_type = #{type}  where l_id = #{id}
     </update>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--

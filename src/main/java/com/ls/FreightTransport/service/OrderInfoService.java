@@ -13,7 +13,7 @@ public interface OrderInfoService {
      * @param id
      * @return
      */
-    int deleteByPrimaryKey(int id);
+    int deleteByPrimaryKey(String id);
 
     /**
      * 添加操作
@@ -29,7 +29,7 @@ public interface OrderInfoService {
      * @param id
      * @return
      */
-    OrderInfo selectByPrimaryKey(int id);
+    OrderInfo selectByPrimaryKey(String id);
 
     /**
      * 全部查询操作

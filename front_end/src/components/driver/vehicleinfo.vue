@@ -6,30 +6,30 @@
 			</marquee>
 			</MenuItem>
 		</div>
-		<Form ref="formValidate" :model="vehicle" :label-width="80" style="position:relative;left: 110px;">
+		<Form ref="formValidate" :model="vehicleInfo" :label-width="80" style="position:relative;left: 110px;">
 			<Row>
 				<Col span="8">
-				<FormItem label="车牌号" prop="license">
-					<Input v-model="vehicle.license" style="" :disabled="yzs"  :maxlength=10 placeholder="请输入车牌号"></Input>
+				<FormItem label="车牌号" prop="vLicense">
+					<Input v-model="vehicleInfo.vLicense" style="" :disabled="yzs"  :maxlength=10 placeholder="请输入车牌号"></Input>
 				</FormItem>
 				</Col>
 				<Col span="8">
 				<FormItem label="品牌" prop="vType">
-					<Input v-model="vehicle.vType" :disabled="yzs":maxlength=10 placeholder="请输入品牌"></Input>
+					<Input v-model="vehicleInfo.vType" :disabled="yzs" maxlength=10 placeholder="请输入品牌"></Input>
 				</FormItem>
 				</Col>
 			</Row>
 			<Row>
 				<Col span="8">
 				<FormItem label="车颜色" prop="vColor">
-					<Select v-model="vehicle.vColor" :disabled="yzs" filterable>
+					<Select v-model="vehicleInfo.vColor" :disabled="yzs" filterable>
 						<Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
 					</Select>
 				</FormItem>
 				</Col>
 				<Col span="8">
 				<FormItem label="车辆类型" prop="tType">
-					<Select v-model="vehicle.tType" :disabled="yzs" filterable >
+					<Select v-model="vehicleInfo.tType" :disabled="yzs" filterable >
 						<Option v-for="item in vehicleType" :value="item.tId" :key="item.tId">{{ item.vName }}</Option>
 					</Select>
 				</FormItem>
@@ -37,8 +37,8 @@
 			</Row>
 			<Row>
 				<Col span="16">
-				<FormItem label="备注"  prop="remarks">
-					<Input v-model="vehicle.remarks" :disabled="yzs" type='textarea' :autosize="{minRows: 2,maxRows: 6}" placeholder="备注"></Input>
+				<FormItem label="备注"  prop="vRemarks">
+					<Input v-model="vehicleInfo.vRemarks" :disabled="yzs" type='textarea' :autosize="{minRows: 2,maxRows: 6}" placeholder="备注"></Input>
 				</FormItem>
 				</Col>
 			</Row>
@@ -80,22 +80,22 @@
 				],
 				url: "http://localhost:8080",
 				vehicleType: '',
-				vehicle: {
-					license: '',
-					iId: '',
+				vehicleInfo: {
+					vLicense: '',
+					vId: '',
 					vType: '',
 					vColor: '',
 					tType: '',
 					dId: '',
-					remarks: '',
+					vRemarks: '',
 				}
 			}
 		},
 		methods: {
 			add() {
 				var th = this;
-				this.vehicle.dId = localStorage.getItem("mUser");
-				axios.post(th.url + '/vehicle/insert', th.vehicle, {
+				this.vehicleInfo.dId = localStorage.getItem("mUser");
+				axios.post(th.url + '/vehicleInfo/insert', th.vehicleInfo, {
 					headers: {
 						"Content-Type": "application/json;charset=utf-8"
 					}
@@ -114,17 +114,17 @@
 			axios.get(th.url + '/vehicleType/selectGroup').then(function(res) {
 				th.vehicleType = res.data.data;
 			})
-			axios.get(th.url + '/vehicle/selectById?id='+localStorage.getItem("mUser")).then(function(res) {
+			axios.get(th.url + '/vehicleInfo/selectById?id='+localStorage.getItem("mUser")).then(function(res) {
 				console.log(res);
 				if(res.data.code == 200){
 					var data = res.data.data;
 					console.log(data);
-					th.vehicle.dId = data.dId;
-					th.vehicle.license = data.license;
-					th.vehicle.remarks = data.remarks;
-					th.vehicle.tType = data.tType;
-					th.vehicle.vColor = data.vColor;
-					th.vehicle.vType = data.vType;
+					th.vehicleInfo.dId = data.dId;
+					th.vehicleInfo.vLicense = data.vLicense;
+					th.vehicleInfo.vRemarks = data.vRemarks;
+					th.vehicleInfo.tType = data.tType;
+					th.vehicleInfo.vColor = data.vColor;
+					th.vehicleInfo.vType = data.vType;
 				}else{
 					th.yzs = false;
 				}

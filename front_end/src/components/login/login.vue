@@ -16,7 +16,7 @@
 		<div class="login">
 			<br />
 			<br />
-			<h1 style="color: white;">货运运</h1>
+			<h1 style="color: white;">货运运平台中心</h1>
 			<br />
 			<Form style="width: 350px;margin: auto;" :model="user">
 
@@ -26,7 +26,7 @@
 						<br />
 					</a><br />
 					<a @click="submitshipper()">
-						<Button type="success" onclick="return false" long> 下单拉货 </Button>
+						<Button type="success" onclick="return false" long> 货主 </Button>
 						<br />
 					</a><br />
 					<a @click="submitdriver()">

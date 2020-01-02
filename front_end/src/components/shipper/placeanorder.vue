@@ -1,28 +1,28 @@
 <template>
 	<div class="amap-page-container">
-		<Form ref="formValidate" :model="orderInformation" :label-width="80" style="margin-top:10px">
+		<Form ref="formValidate" :model="orderInfo" :label-width="80" style="margin-top:10px">
 			<Row>
 				<Col span="8">
-				<FormItem label="车辆类型" prop="oType">
-					<Select v-model="orderInformation.oType" filterable>
+				<FormItem label="车辆类型" prop="olType">
+					<Select v-model="orderInfo.olType" filterable>
 						<Option v-for="item in vehicleType" :value="item.tId" :key="item.vName">{{ item.vName }}</Option>
 					</Select>
 				</FormItem>
 				</Col>
 				<Col span="8">
-				<FormItem label="联系人电话" prop="contacts">
-					<Input v-model="orderInformation.contacts" :maxlength=11 placeholder="请输入联系人电话"></Input>
+				<FormItem label="联系电话" prop="oContacts">
+					<Input v-model="orderInfo.oContacts" :maxlength=11 placeholder="请输入联系人电话"></Input>
 				</FormItem>
 				</Col>
 				<Col span="8">
-				<FormItem label="预约时间" prop="startDate">
-					<DatePicker type="datetime" format="yyyy-MM-dd HH:mm:ss" @on-change="datesa()" placeholder="请选择预约时间" v-model="orderInformation.startDate"
+				<FormItem label="预约时间" prop="oStartDate">
+					<DatePicker lType="datetime" format="yyyy-MM-dd HH:mm:ss" @on-change="datesa()" placeholder="请选择预约时间" v-model="orderInfo.oStartDate"
 					 style="width: 200px"></DatePicker>
 				</FormItem>
 				</Col>
 			</Row>
 			<Row>
-				<FormItem label="发货地址" prop="shippingAddress">
+				<FormItem label="发货地址" prop="oShippingAddress">
 					<Col span="3">
 					<Input v-model="fhcs" :maxlength=5 placeholder="请输入发货城市"></Input>
 					</Col>
@@ -35,11 +35,11 @@
 					<span>高德发货地址</span>
 					</Col>
 					<Col span="6">
-					<Input v-model="orderInformation.shippingAddress" :maxlength=30 placeholder="发货地址"></Input>
+					<Input v-model="orderInfo.oShippingAddress" :maxlength=30 placeholder="发货地址"></Input>
 					</Col>
 				</FormItem>
 			</Row>
-			<FormItem label="收货地址" prop="receivingAddress">
+			<FormItem label="收货地址" prop="oReceivingAddress">
 				<Col span="3">
 				<Input v-model="shcs" :maxlength=5 placeholder="请输入收货城市"></Input>
 				</Col>
@@ -52,30 +52,30 @@
 				<span>高德收货地址</span>
 				</Col>
 				<Col span="6">
-				<Input v-model="orderInformation.receivingAddress" :maxlength=30 placeholder="收货地址"></Input>
+				<Input v-model="orderInfo.oReceivingAddress" :maxlength=30 placeholder="收货地址"></Input>
 				</Col>
 			</FormItem>
 			<Row>
 				<Col span="8">
-				<FormItem label="路程/公里" prop="oType">
+				<FormItem label="路程/公里" prop="olType">
 					<Input v-model="lc" disabled placeholder="自动计算"></Input>
 				</FormItem>
 				</Col>
 				<Col span="8">
-				<FormItem label="时间/分钟" prop="contacts">
+				<FormItem label="时间/分钟" prop="oContacts">
 					<Input v-model="sj" disabled placeholder="自动计算"></Input>
 				</FormItem>
 				</Col>
 				<Col span="8">
-				<FormItem label="订单价格" prop="price">
-					<Input v-model="orderInformation.price" :maxlength=18 disabled placeholder="自动计算"></Input>
+				<FormItem label="订单价格" prop="oPrice">
+					<Input v-model="orderInfo.oPrice" :maxlength=18 disabled placeholder="自动计算"></Input>
 				</FormItem>
 				</Col>
 			</Row>
 
 			<Row>
 				<FormItem label="订单备注" prop="sId">
-					<Input v-model="orderInformation.oRemarks" type="textarea" :autosize="{minRows: 3,maxRows: 5}" placeholder="备注"></Input>
+					<Input v-model="orderInfo.oRemarks" type="textarea" :autosize="{minRows: 3,maxRows: 5}" placeholder="备注"></Input>
 				</FormItem>
 			</Row>
 			<Button type="success" style="width:100%" onclick="return false" @click="ljyy()">立即预约</Button>
@@ -84,7 +84,7 @@
 </template>
 
 <script>
-	
+	import $ from 'jquery'
 	export default {
 		data: function() {
 			return {
@@ -92,7 +92,6 @@
 				sj: '',
 				url: "http://localhost:8080",
 				vehicleType: "",
-				collectionFee: '',
 				model13: '',
 				fhcs: '',
 				collectionFees: {
@@ -101,7 +100,7 @@
 					mileage: '',
 					cStarting: 12,
 					remarks: '',
-					cType: ''
+					clType: ''
 				},
 				shcs: '',
 				sh: '',
@@ -111,29 +110,28 @@
 				loading1: false,
 				options1: [],
 				options2: [],
-				locations: {
-					id: 0,
-					addName: "",
-					addIp: "",
-					endIp: "",
-					endName: "",
-					price: 12,
-					type: 5,
-					peiYong: "",
-					peiYongs: ""
+				locateInfo: {
+					lId: 0,
+					lAddName: "",
+					lAddIp: "",
+					lEndIp: "",
+					lEndName: "",
+					lPrice: 12,
+					lType: 5,
+					lPeiYong: "",
+					lPeiYongs: ""
 				},
-				orderInformation: {
+				orderInfo: {
 					oId: 0,
-					oType: "",
-					contacts: "",
+					olType: "",
+					oContacts: "",
 					oRemarks: "",
-					startDate: new Date(),
-					price: "",
-					shippingAddress: "",
-					receivingAddress: "",
+					oStartDate: new Date(),
+					oPrice: "",
+					oShippingAddress: "",
+					oReceivingAddress: "",
 					sId: 1,
-					oState: "待运输",
-					eId: 0
+					oState: "待运输"
 				}
 			};
 		},
@@ -145,18 +143,18 @@
 					return;
 				}
 				if (query.length > 0) {
-					axios.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
-						'&type=&location=&city=' + th.fhcs + '&datatype=all',
+					$.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
+						'&lType=&location=&city=' + th.fhcs + '&datalType=all',
 						function(res) {
 							if (res.tips.length > 0) {
 								th.loading1 = true;
 								setTimeout(() => {
 									th.loading1 = false;
 									th.options1 = res.tips;
-									th.orderInformation.shippingAddress = th.options1[0].district + query;
+									th.orderInfo.oShippingAddress = th.options1[0].district + query;
 									th.fhlocation = th.options1[0].location;
 									console.log("发货："+th.options1[0].location);
-									if (th.orderInformation.receivingAddress.length > 1 && th.orderInformation.shippingAddress.length > 1) {
+									if (th.orderInfo.oReceivingAddress.length > 1 && th.orderInfo.oShippingAddress.length > 1) {
 										th.datesa();
 									}
 								}, 50);
@@ -170,15 +168,15 @@
 					return;
 				}
 				if (query.length > 0) {
-					axios.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
-						'&type=&location=&city=' + th.fhcs + '&datatype=all',
+					$.get('https://restapi.amap.com/v3/assistant/inputtips?key=894fb9d68503edc13aabaf040605f538&keywords=' + query +
+						'&lType=&location=&city=' + th.fhcs + '&datalType=all',
 						function(res) {
 							if (res.tips.length > 0) {
 								th.loading1 = true;
 								setTimeout(() => {
 									th.loading1 = false;
 									th.options2 = res.tips;
-									th.orderInformation.receivingAddress = th.options2[0].district + query;
+									th.orderInfo.oReceivingAddress = th.options2[0].district + query;
 									th.shlocation = th.options2[0].location;
 									console.log("收货："+th.options2[0].location);
 									th.datesa();
@@ -261,17 +259,17 @@
 				return ((arg2 * m - arg1 * m) / m).toFixed(n);
 			},
 			datesa() {
-				if (this.orderInformation.receivingAddress.length > 1 && this.orderInformation.shippingAddress.length > 1) {
-					this.locations.endName = this.orderInformation.receivingAddress;
-					this.locations.addName = this.orderInformation.shippingAddress;
-					this.locations.endIp = this.shlocation;
-					this.locations.addIp = this.fhlocation;
+				if (this.orderInfo.oReceivingAddress.length > 1 && this.orderInfo.oShippingAddress.length > 1) {
+					this.locateInfo.lEndName = this.orderInfo.oReceivingAddress;
+					this.locateInfo.lAddName = this.orderInfo.oShippingAddress;
+					this.locateInfo.lEndIp = this.shlocation;
+					this.locateInfo.lAddIp = this.fhlocation;
 					this.addss();
 				}
 			},
 			addss() {
 				var th = this;
-				axios.get(
+				$.get(
 					'//restapi.amap.com/v3/distance?key=894fb9d68503edc13aabaf040605f538&origins=' + th.fhlocation + '&destination=' +
 					th.shlocation + '&type=1',
 					function(res) {
@@ -284,18 +282,18 @@
 			},
 			ljyy() {
 				var th = this;
-				th.orderInformation.sId = localStorage.getItem("mUser");
-				axios.post(th.url + '/orderInformation/insert', th.orderInformation, {
+				th.orderInfo.sId = localStorage.getItem("mUser");
+				axios.post(th.url + '/orderInfo/insert', th.orderInfo, {
 					headers: {
-						"Content-Type": "application/json;charset=utf-8"
+						"Content-type": "application/json;charset=utf-8"
 					}
 				}).then(function(res) {
 					if (res.data.code === 200) {
 						th.$Message.success("预约成功");
-						th.locations.peiYong = res.data.message;
-						axios.post(th.url + '/image/locations/insert', th.locations, {
+						th.locateInfo.lPeiYong = res.data.message;
+						axios.post(th.url + '/image/locateInfo/insert', th.locateInfo, {
 							headers: {
-								"Content-Type": "application/json;charset=utf-8"
+								"Content-type": "application/json;charset=utf-8"
 							}
 						}).then(function(res) {
 							if (res.data.code === 200) {
@@ -304,7 +302,7 @@
 								th.$Message.error("导入地图失败");
 							}
 						})
-						window.location.href = "#/khindex";
+						window.location.href = "#/shipper";
 					} else {
 						th.$Message.error(res.data.message);
 					}
@@ -312,7 +310,7 @@
 			},
 			setdates() {
 				var th = this;
-				var now = this.orderInformation.startDate,
+				var now = this.orderInfo.oStartDate,
 					hour = now.getHours();
 				if (hour > 6 && hour < 22) {
 					th.cDate = 1.2;
@@ -322,20 +320,17 @@
 					th.cDate = 1.5;
 					th.mileage = 1.2;
 				}
-				th.orderInformation.price = th.accAdd(th.accMul(th.lc,th.mileage),th.accMul(th.cDate,th.sj));
-				if (th.orderInformation.price < 12) {
-					th.orderInformation.price = 12;
+				th.orderInfo.oPrice = th.accAdd(th.accMul(th.lc,th.mileage),th.accMul(th.cDate,th.sj));
+				if (th.orderInfo.oPrice < 12) {
+					th.orderInfo.oPrice = 12;
 				}
-				th.locations.price = th.orderInformation.price;
+				th.locateInfo.lPrice = th.orderInfo.oPrice;
 			},
 		},
 		created() {
 			var th = this;
 			axios.get(th.url + '/vehicleType/selectGroup').then(function(res) {
 				th.vehicleType = res.data.data;
-			})
-			axios.get(th.url + '/collectionFee/selectAll').then(function(res) {
-				th.collectionFee = res.data.data;
 			})
 		}
 	};
