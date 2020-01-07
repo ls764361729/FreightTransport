@@ -283,6 +283,7 @@
 								id: id
 							}
 						}).then(function(res) {
+							console.log(res)
 							if (res.data.code === 200) {
 								th.$Message.success(res.data.message);
 								th.changePage(1);

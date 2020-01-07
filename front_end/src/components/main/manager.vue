@@ -158,10 +158,10 @@
 								<MenuItem name="订单全部信息">订单全部信息</MenuItem>
 							</router-Link>
 							<router-Link to="/manager/intransported">
-								<MenuItem name="待运输订单">待运输订单</MenuItem>
+								<MenuItem name="运输中订单">运输中订单</MenuItem>
 							</router-Link>
 							<router-Link to="/manager/tobetransported">
-								<MenuItem name="运输中订单">运输中订单</MenuItem>
+								<MenuItem name="待运输订单">待运输订单</MenuItem>
 							</router-Link>
 							<router-Link to="/manager/complete">
 								<MenuItem name="已完成订单">已完成订单</MenuItem>

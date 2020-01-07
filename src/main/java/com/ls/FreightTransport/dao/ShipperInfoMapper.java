@@ -64,12 +64,7 @@ public interface ShipperInfoMapper {
      * @return
      */
     int count(@Param("sName") String sName, @Param("sPhone") String sPhone, @Param("sSex") String sSex);
-    /**
-     * 根据手机号码获取信息
-     * @param phone
-     * @return
-     */
-    ShipperInfo getByInfo(@Param("phone") String phone);
 
+    ShipperInfo getByInfo(@Param("phone") String phone);
 
 }

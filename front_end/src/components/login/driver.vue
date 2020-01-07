@@ -18,27 +18,21 @@
 			<br />
 			<h1 style="color: white;">货运运司机登录中心</h1>
 			<br />
-			<Form style="width: 330px;margin: auto;" :model="user">
-				<div >
+				<Form style="width: 330px;margin: auto;" :model="user">
+				<div>
 					<FormItem>
-						<Input type="text" v-model="user.phone" :maxlength="15" placeholder="手机号码" >
+						<Input type="text" v-model="user.phone" :maxlength="15" placeholder="手机号码">
 						<Icon type="md-phone-portrait" slot="prepend"></Icon>
 						</Input>
 					</FormItem>
 					<FormItem>
 						<Input type="password" v-model="user.password" :maxlength="20" placeholder="密码">
 						<Icon type="ios-lock-outline" slot="prepend"></Icon>
-						123456</Input>
-						<FormItem style="float: left;">
-							<a @click="bdyz()">
-								<Button type="text" onclick="return false" ghost>{{btn}}</Button>
-							</a>
-						</FormItem>
+						</Input>
 					</FormItem>
 				</div>
-				
 				<FormItem>
-					<a @click="sub()">
+					<a @click="handleSubmit()">
 						<Button type="success" onclick="return false" long> 登 录 </Button>
 					</a>
 				</FormItem>
@@ -53,52 +47,49 @@
 			return {
 				user: {
 					password: '',
-					phone: '',
-					yzm: '',
-					btn1: false
+					phone: ''
 				},
 				code: 1024,
 				url: "http://localhost:8080"
 			}
 		},
 		methods: {
-			sub() {
-				window.location.href = "/#/driver/";
-					if (this.user.yzm.length == 0 || this.user.yzm.trim() == "") {
-						this.$Message.warning('请输入验证码!');
-						return false;
+			handleSubmit() {
+				if (this.user.phone.length == 0 || this.user.phone.trim() == "") {
+					this.$Message.warning('手机号码错误!(手机号码为11位)');
+					return false;
+				}
+				if (this.user.password.length == 0 || this.user.password.trim() == "") {
+					this.$Message.warning('请输入密码!');
+					return false;
+				}
+				var th = this;
+				axios.get(th.url + '/login/auth', {
+					params: {
+						phone: th.user.phone,
+						password: th.user.password,
+						sf: 3
 					}
-					if (this.user.yzm.length != 6) {
-						this.$Message.warning('验证码不正确!');
-						return false;
-					}
-					var th = this;
-					axios.get(th.url + '/login/yzm', {
-						params: {
-							phone: th.user.phone,
-							yzm: th.user.yzm,
-							sf:3
-						}
-					}).then(function(res) {
-						th.bd(res);
-					});
+				}).then(function(res) {
+					th.bd(res);
+				});
+			
 				return false;
 			},
 			bd(res) {
-			if (res.data.code == 1028) {
+				if (res.data.code == 1028) {
 					this.$Message.success(res.data.message);
-					localStorage.setItem('accessToken',res.data.data.sign);
-					localStorage.setItem('mName',res.data.data.mName);
-					localStorage.setItem('mUser',res.data.data.mUser);
+					localStorage.setItem('accessToken', res.data.data.sign);
+					localStorage.setItem('mName', res.data.data.mName);
+					localStorage.setItem('mUser', res.data.data.mUser);
 					setTimeout(function() {
-						console.log(localStorage.getItem('accessToken'));
-						window.location.href = "/#/czindex/";
+						window.location.href = "/#/driver";
 					}, 900);
 				} else {
 					this.user.password = "";
 					this.$Message.error(res.data.message);
 				}
-			},
+			}
 		}
 	}
 </script>

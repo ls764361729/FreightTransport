@@ -2,6 +2,7 @@ package com.ls.FreightTransport.controller;
 import com.ls.FreightTransport.entity.OrderInfo;
 import com.ls.FreightTransport.service.OrderInfoService;
 import com.ls.FreightTransport.util.Result;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,7 @@ public class OrderInfoController {
      * @return
      */
     @GetMapping("/deleteByPrimaryKey")
+    @RequiresRoles("admin")
     public Result deleteByPrimaryKey(String id) {
         try {
 

@@ -57,7 +57,6 @@
 		},
 		methods: {
 			handleSubmit() {
-				window.location.href = "/#/shipper/";
 				if (this.user.phone.length == 0 || this.user.phone.trim() == "") {
 					this.$Message.warning('手机号码错误!(手机号码为11位)');
 					return false;
@@ -71,7 +70,7 @@
 					params: {
 						phone: th.user.phone,
 						password: th.user.password,
-						sf: 0
+						sf: 1
 					}
 				}).then(function(res) {
 					th.bd(res);
@@ -86,7 +85,7 @@
 					localStorage.setItem('mName', res.data.data.mName);
 					localStorage.setItem('mUser', res.data.data.mUser);
 					setTimeout(function() {
-						window.location.href = "/#/";
+						window.location.href = "/#/shipper";
 					}, 900);
 				} else {
 					this.user.password = "";

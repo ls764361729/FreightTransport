@@ -2,6 +2,7 @@ package com.ls.FreightTransport.controller;
 import com.ls.FreightTransport.entity.FinancialInfoSheet;
 import com.ls.FreightTransport.service.FinancialInfoSheetService;
 import com.ls.FreightTransport.util.Result;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -21,6 +22,7 @@ public class FinancialInfoSheetController {
      * @return
      */
     @GetMapping("/deleteByPrimaryKey")
+    @RequiresRoles("admin")
     public Result deleteByPrimaryKey(int id) {
         try {
 

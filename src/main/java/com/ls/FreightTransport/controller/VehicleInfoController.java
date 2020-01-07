@@ -3,6 +3,7 @@ import com.ls.FreightTransport.dao.VehicleInfoMapper;
 import com.ls.FreightTransport.entity.VehicleInfo;
 import com.ls.FreightTransport.service.VehicleInfoService;
 import com.ls.FreightTransport.util.Result;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -23,6 +24,7 @@ public class VehicleInfoController {
      * @return
      */
     @GetMapping("/deleteByPrimaryKey")
+    @RequiresRoles("admin")
     public Result deleteByPrimaryKey(int id) {
         try {
 

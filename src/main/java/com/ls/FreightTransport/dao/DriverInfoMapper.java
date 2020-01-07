@@ -47,20 +47,14 @@ public interface DriverInfoMapper {
      */
     int updateByPrimaryKey(DriverInfo driverInfo);
 
-    /**
-     * 查询所有数据
-     * @return
-     */
     int count();
-    //修改密码
+
     int updatePassword(@Param("password") String password, @Param("dId") int dId);
+
     List<DriverInfo> getSelectVague(@Param("dName") String dName, @Param("dPhone") String dPhone, @Param("dSex") String dSex);
 
     int getCountVague(@Param("dName") String dName, @Param("dPhone") String dPhone, @Param("dSex") String dSex);
-    /**
-     * 根据手机号码获取信息
-     * @param phone
-     * @return
-     */
-    DriverInfo getByPhone(@Param("phone") String phone);
+
+    DriverInfo getByInfo(@Param("phone") String phone);
+
 }

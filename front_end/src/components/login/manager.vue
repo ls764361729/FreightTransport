@@ -55,7 +55,6 @@
 		},
 		methods: {
 			handleSubmit() {
-				window.location.href = "/#/manager/";
 				if (this.user.phone.length == 0 || this.user.phone.trim() == "") {
 					this.$Message.warning('手机号码错误!(手机号码为11位)');
 					return false;
@@ -84,7 +83,7 @@
 					localStorage.setItem('mName', res.data.data.mName);
 					localStorage.setItem('mUser', res.data.data.mUser);
 					setTimeout(function() {
-						window.location.href = "/manager";
+						window.location.href = "/#/manager";
 					}, 900);
 				} else {
 					this.user.password = "";

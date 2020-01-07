@@ -3,6 +3,7 @@ import com.ls.FreightTransport.dao.ManagerMapper;
 import com.ls.FreightTransport.entity.Manager;
 import com.ls.FreightTransport.service.ManagerService;
 import com.ls.FreightTransport.util.Result;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -24,6 +25,7 @@ public class ManagerController {
      * @return
      */
     @GetMapping("/deleteByPrimaryKey")
+    @RequiresRoles("admin")
     public Result deleteByPrimaryKey(int id) {
         try {
 

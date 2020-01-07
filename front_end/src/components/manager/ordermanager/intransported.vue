@@ -165,7 +165,7 @@
 						width: 100
 					},
 					{
-						title: '联系人',
+						title: '联系号码',
 						key: 'oContacts',
 						align: 'center',
 						tooltip: true
